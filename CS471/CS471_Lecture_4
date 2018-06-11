@@ -1,0 +1,362 @@
+CPU Scheduling algorithms
+
+We saw a layout once before... the concept of CPU burst
+
+CPU burst: where the CPU is doing meaningful work and not in the block state
+
+How long I get to exectute before I run into an I/O call...
+
+then I/O burst
+
+Part of the I/O burst is waiting on the ready queue
+
+
+There are a number of different techniques for scheudling processes... some are based on priority, some we'll call "priority free"
+
+The simplest one... that we did before... remember we were playing around with turn around times.
+
+We got a better turn around time by makign the shortest job first... this is referred to shortest-job-first or shortest-job-next.. these are synonomous
+
+Of course, dealing with cpu burst determine what the shortest job is going to be... there are algorithms for determining this based on previous cpu burst. Frankly, it's barely an educated guess.. b/c ultimately these are data driven.
+
+It's easier to schedule stuff if you've run the same kind of thing in the past.
+
+Therefore we can jumble schedule around to make it efficient... but if we don't have any idea it's luck of the draw
+
+
+At ODU we have a priorty queue system... this will be the first project
+
+CPU schedulers selects among processes in memory that are ready to execute and allocates the CPU to one of them... that's the dispatcher. That's the low-level scheduler... it's the one that picks from the ready pile which one will be given a processor...
+
+Dispatcher module gives control to a cpu to the process selected.
+
+Dispatch latency is related to the context switch
+
+
+Scheduling criteria.... cpu utilization, keep the cpu as busy as possible has become less of an issue in recent years. We have multiple cores now... multiple cpus in the box. We do want to execute as fast as we can but speeding up the cpu isn't gonna happen anymore... we're butting heads with the speed of light
+
+
+The only way to speed stuff up now is to do more things at a time... dual core, quad core, etc... most you can do is 16 core because managing 16 cores gets to be more overhead... there was a study, not sure whether it's true or not .... 
+
+
+Throughput and turnaround time are the big optimization criteria
+
+
+We're gonna have to play some games with these scheduling algorithms... e.g. with priorities.
+
+We take snap shots of the system; but the system is dynamic; we have new processes arriving all the time. It could be that something waits forever as new processes come in... but, we have to account for that 
+
+
+priority set ups mean that it's not fair... ok, higher priorities go first, but we have to make sure we don't shut somebody out
+
+
+The simplest one is first come, first served == first in, first out. In other words, we don't have priorities...
+
+Very easy to implement first in, first out--> put in single queue to manipulate easily
+
+**Anything that's in the ready queue is already in memory.... 
+
+
+NOTE: Gantt chart question will be on exam
+
+
+Shortest job first... a few problems... how do we know what the shortest job is gonna be? This doesn't take into account new processes
+
+Shortest job first means we have a dequeue at the front. It's a different data structure mechanism
+
+
+
+Priority scheduling has priorty number associated with it.... this is rigged such that you may have more than one process that has the same priorty.. the way you set this up mechanically is by an array of queues by priority... scheduler goes down the queues and picks the one with the highest priority and takes the front off if there's one in there
+
+Problem: starvation and aging
+
+
+There are two reasons to change a process: aging and priority inversion
+
+Aging: I am scum of earth priority... been there waiting for a while, I will automatically by time be bumped up a level... keep getting bumped up until I get a shot at processor...
+
+Agigng has to be put in a priorty queue system or we're gonna have starving
+
+Interprocess communication requires priority inversion (e.g. a high priorty process needs to communicate with a lower priorty process)... in this case the low priority process is bumped up to match the priority of the one that needed it
+
+Round Robin scheduling
+
+Each process gets small unit of CPU time.... time quantum or quantum--typically 10-100ms. On newer machines it's 100ms. In all probability we won't get through 100ms before getting swapped out
+
+In the runnning... out one of three ways... quit, blocked, or time-slice and straight back to ready to wait turn again
+
+Round Robin is basically first come, first served with a time slice function
+
+
+
+PERFORMANCE  if the quantum is large you get fifo... if it's small, q must be large with respect to context switch, otherwise overhead is too high
+
+Context switch is pure overhead... b/c nothing else is happening... so, we don't want a lot of context switches. If all I am doing is context switching the term is thrashing... I'm not doing a lot of executing... just storing stuff in PCBs and loading stuff in PCBs
+
+This gets us into threads... we have certain things about threads. A thread context switch is a lot less than a full blown process because it's part of the same process... all base stuff is there. Threads are technically called light weight processes. Multithreaded process is more efficient than a single process one
+
+Multilevel Queue... ready queue partioned... 
+
+
+Rarely is a real time process real time... but, it does happen for certain parts of systems... e.g. avionics we want real time processing of, say, steering... but... not necessarily distance
+
+
+Project going up today... we'll discuss next week
+
+
+Real time operating systems are very simple... but they're also very small. Most of them are embedded systems
+
+
+THREADS
+
+Also called lightweight processes.... 
+
+The concept of a multithreaded process. There are two flavors of threads: 
+
+user defined thread
+
+kernel thread
+
+Modern OSs allow kernel threads. In the old days threading was kind of an illusion... 
+
+You can save stuff in the threads... you can make execution much more efficient. E.g. you can put I/O in their own threads
+
+If you put I/O out in its own thread you can save having to wait on blocking calls for process to run. OS would rather do a little context switch with a thread than a full blown one with a new process (assuming near begining or middle of time slice)... this is a lot less overhead
+
+User defined threads in order to be most efficient need to be switched to kernel threads--> these are real threads. 
+
+Literally the user threads from the old days are mapped to kernel threads..
+
+
+How many threads you have is based on your hardware capability.
+
+Each light weight process is associated with one kernel thread... a particular kernel thread can be pinned to a particular CPU. Kernel is OS but, the pinning is done to hardware
+
+Communications Between Process
+
+First of all, you have the concept of what the user sees and you have what the operating system deals with mechanically
+
+
+Real old days pipes were the only way for processes to communicate > Prog1 | Prog 2
+
+Shared memory is common memory between process... shared variables can be setup in C++ . . . this has been around a long time. Fortran 1957 had something called a common block which was a named block that could be shared.  There was no synchronization, but this was shared memory
+
+
+Today shared memory is either shared memory (on the same box) or network messages (not on the same box--some other process across some network)
+
+Sockets are a block structured comm mechnanicsm (socket.h).... you open a socket at a remote site, communicate by reading to/writing from, close socket... block structure means we send a whole block. In fact socket mechanism, when you open a socket... every machine has a process that is listening for socket connections. Every process that communicates has a software port number. You don't know what the other guys port number is... 25 or 26 is yours... you send a message to the socket port number, say you wanna communicate with someone... listening process forks a child and then sets up communication... the original process then goes back to listen. 
+
+The block structure is an issue... how do we implement it? If both processes are on the same machine, we fake it and use shared memory... otherwise we send network messages. And based on whether you are on LAN or have to go over internet, the types of address schemes are different
+
+Streams are the new kid on the block. Stream is called as such because it's like a hose of bytes... stream head is a huge queue of bytes. Looks like you're sending byte by byte but you're not... that's too hard. Leaky Bucket Algorithm.. block fills up bucket... and bytes trickle out. If bucket runs dry that's a problem and if bucket gets too many bytes that's a problem. This is what's needed for constant rate data: video and audio
+
+One frame per 1/60 of second
+
+How are streams implmeneted? If on same box... shared memory. If not, network messages.
+
+Not every operating system has streams... but every OS understands sockets... So, internet transfers... all GUI stuff (like RDP) is socket based. The reason: streams was a commerical thing... everything else was created by engineers... 
+
+Unix had system I, system III, and system V	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

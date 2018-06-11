@@ -1,0 +1,111 @@
+Primatives..
+
+WritePixel has four params (color, x, y, alpha)
+
+alpha -> is a blending function we need from time to time--takes whatever color is in the buffer now and blends it with the new one coming in... If you want a new color completely, alpha is 100%. If you are trying to do transparency or glass or something you can do something like 95% of background and 5% of grey or silver. Computed by multiplying in and out... [CHECK FOR THIS CODE]
+
+Truncating... add .5 and truncate
+
+Next primative--> draw a straight line. Vector graphics you draw straight lines. In raster graphics you've got issues
+
+Aliasing... where you have to have a jagged line to make a straight line in pixels
+
+Even straight lines might have aliasing issues because the lines are different size
+
+We'll discuss anti-aliasing... it's a bitch. Lots of memory, lots of floating point computation. Didn't use to see this because of memory.
+
+"Sweating like Bin Laden cashing a check"
+
+Sun had a piece of anti-aliasing hardware.... box plugged from monitor into computer. Box cost $60,000!! 
+
+Biggest problem is determing what the next pixel in line is.... hard way: do floating point arithmetic. Old days... mindpoint algorithm--all done with integer hardware---in software. Now everything is done in floating point.
+
+///
+
+Midpoint alg no longer used--> now used floating point... they have actual floating point hardware now.
+
+Quadrants are formula driven, like the circle.... this is where we use reflection.
+
+
+--
+
+The Circle:
+
+All done in floating point
+
+In old days, there wasn't floating point hardware... all was done in software
+
+
+Old 486 used to have an add-on mx chip for floating point.
+
+
+Note: circle is a special circle of elipse... but for elipse, gotta do one quarter of it... for hyperbola or parabola gotta do 1/2 of the shape and then do reflection. Reflection saves a lot of calculations.
+
+These quadrant calcs are built in the hardware to be made quickly and easily.
+
+Arbitrary curves are done with cubics--we won't see this for a while. The ones we deal with first are formula driven.
+
+OpenGL.... line smoothing algorithm. Checks to see if you have line smoothing hardware. If not, it computes it in software. It's slow though...
+
+
+Another primitive: polygons
+
+Used in old days to represent curved surfaces--polygon meshes... modeling buildings for example could just be polygons.... holes for doors and windows
+
+curved surface you're gonna have a whole bunch of polygons... and facets like a diamond. Polygons are 2D represented in 3D. It's flat.
+
+Polygons are shaded to make them look smooth in games... take off shading and it looks all flat
+
+
+
+Near End of class - Graphics Pipeline.... can do piped parallelism, piped architecture. Now we have pure parallelism... bunch of processors doing the whole thing in multiple processesors
+
+First thing you do in graphics pipeline is take model apart and break it into its primiatives because you're going to do operations on its primatives... so, first thing we do is break it into polygons... database traversal
+
+Polygon meshes are straight lines but you do not use straight lines to compute them
+
+Polygons can only include internal pixels, not external ones... no matter how close they are. Causes trouble--something referred to as a sliver.
+
+Polygons hae to be drawn as they are seen, and then projected.
+
+Can't treat polygons as straight lines.... but, we can break things up into individual polygons through database traversal, then create an edge table... from that create an active edge table... from the active edge table we draw the polygon 
+
+
+That's a lot of steps for one polygon. An edge table is an array of linked lists.. an active edge table is one row of the array of linked lists, adjusted. Active edge table doesn't exist totally... only one line at a time. We scan from top row down: creates scan lines. Since we scan horizontally this means there is no such thing as a horizontal edge
+
+Example Edge Table (Also one in the book)... on midterm and final we will have to get an edge table from a polygon                                                                                                                                                       
+
+All shading is done with surface normals.
+
+NO class on 31st
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

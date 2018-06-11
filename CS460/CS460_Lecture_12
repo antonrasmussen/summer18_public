@@ -1,0 +1,199 @@
+Curved lines and surfaces
+
+we did some curves...quadrics... these are general purpose curves and arbitrary curves
+
+Dealing with curved lines: 2D entity; curved surfaces: 3D entity
+
+Cubics.... arbitrary curve 
+
+Old days: polygon mesh (this is how games work b/c we have very fast hardware for polygons)
+
+Real time is the key in games and you just make the images as good as you can in the short time allotted.
+
+Dealing with it that way, with a broad curve is one thing...
+
+What if you have an arbitray curve... well, think about approx. we're dealing with pictures... if you want it to be fairly accurate
+
+What's important for the finished product is the underlying model for the end result to function correctly (think piston)... things like lawn ornaments, who cares.
+
+The picture is an approximation: the model! has to be accurate. The piston is a bad example b/c it's round but we're not gonna make one of those with lines
+
+In computer graphics you have to sep out: what's the underlying model and how do I represent it with images
+
+It can't be ultra accurate
+
+But, if we make the line segments really small we can get very close to perfectly accurate, but it requires us to store 2 endpoints per line... not a good way to do it
+
+French Mathematician: Bezier... came up with Bezier curves for making them more accurate (he did this before computer graphics applications... he was working on splines, which were used to design aircraft wings. Literally they would take a strip of aluminium and put weights on it to adjust the heights and someone would come along and trace it, and someone would then build a rib.. these were all prop planes, they were crossing over from fabric to aluminium... hawker hurricane was a transition plane... between new stuff and old WWII planes, it was cheaper.
+
+"I would mainline this Coke Zero but the bubbles are a bitch"
+
+No parachutes on WWI fighter planes... 
+
+Spline tech. is what we do with arbitrary curve... we break it up into sections: splines
+
+This isn't actually a 1 for 1 exact model for how they worked with planes... but it's good for our purposes
+
+
+Each of the splines is a cubic ax3 + bx2 + cx + d
+
+Each cubic has four vals for coeff and endpoints... call nots... that in most cases join up with other splines
+
+
+Getting them correct was a nightmare until Bezier came along with his ideas: vector type arith
+
+An arbitrary cubic he'd have vectors tangent to line at point (gotten by deriv) and he'd manipulate the vector to change the curve...
+
+vectors are hard on comps... came up with Hermite curves: Bezier arith but vecs are rep. by straight lines. Bezier style arith was tied to points to make the curve moveable by grabbing the point on the end of the line: the control point.
+
+This allows for a smooth transition of the not.
+
+We get to the point of being able to manipulate whole curves at a time.... 
+
+
+Then we get into curved surfaces: Polygon meshes we have faces too... these used to be the only way to rep. curved surfaces
+
+The problem is about storing the number of polygons... the more accurate i want it to be, the more polygons I have to store
+
+Video games use shading to avoid having so many polygons...
+
+BUt, we still want more accurate model for drawing curved surfaces bi-cubic patches... they have four edges but the edges themselves are cubic lines... it's a four sided polygon with curved edges and not straight edges.
+
+Doing a curved surface is really compute intensive... as a model it's something you just have to deal with. But, in use, it's not efficent to compute.
+
+Look around edges of video game characters they are all straight lines with shading, not curved surfaces...
+
+
+Curved surface can be made with many fewer bi-cubic patches
+
+
+
+Edge requirements are cubics... will have four sets of edges and four points to store bi-cubic
+
+Classic tradeoff of space vs time
+
+If I am dealing with something that has to be even reasonably accurate I'm not dealing with polygon mesh.... 
+
+Quadrics you can get accurate models
+
+
+Data Structures for polygon meshes---there are mistakes in the books here. They changed the name of one of the methods
+
+"The spell-checker on these white boards is shit"
+
+Three methods:
+
+1. Explicit
+
+2. Pointer to Vertex List
+
+3. Pointer to Edge list aka Explict Edge.... screwy. It sounds like it's the first one, but it isnt. In our book there are four authors... what ended up happening as the book went through updates, some of the text was caught but the editor didn't catch the use of explicit edge in lieu of pointer to edge list
+
+THere are considerations: 
+
+1) Efficiency--minimizing storage 
+2) I want to keep track of shared verticies (if I can)
+3) I want to keep track of shared edges (if I can)
+
+Frankly if I can come up with an edge list, that's all I've gotta draw are the edges.
+
+Book example of two triangles with shared edge is a bad example because in reality you're going to have way many shared edges on the inside than on the outside (stand alone)... anything in the middle is going to be shared unless you have a hole
+
+
+Standard test question... you have a polygon mesh, how many bytes does it take to store it using the three methods (three numerical answers)... simplified
+
+integers are one byte
+
+
+Explicit 
+
+Each polygon is going to have three dimensions ... even though it's 2D, it's stored in 3D
+
+
+Looking at what's double triangs in book:   {LOOK AT BOOK!!!!}
+
+(V2 V3 V4)(V2 V4 V1)
+
+Using one bite integer... this takes 18 bytes = (#of verts = 3) * (#ofIntegerBytes in polygon 1 = 3) * (#ofIntegerBytes in polygon 2 = 3)... it's explicit because each polygon is listed 
+
+This works, but it's not very efficient in terms of storage
+
+Vector hardware is new... which is why stuff is stored in arrays because back in the day vector hardware wasn't around
+
+
+Pointer to vertex list (v1 v2 v3 v4) (2 3 4) (2 4 1) . . . 12 for vertex list (because v1-v4... each vertex has 3 bytes in it)... each of the representations of the polygon 1 and 2 are going to have 3 bytes... so we 12 + 3 + 3 = 18... this is the same as explicit but only because we are dealing with the most simple polygon
+
+
+Pointer to edge list 
+
+E1(v1 v2 P2 NULL) where E1 is part of Polygon 2 and not part of Polygon 1)
+
+	.
+	.
+	.
+	.
+E5(v2 V4 P1 P2) the only one in our example shared by both polygons
+
+
+Definition of an edge shows whether its shared or not
+
+It does not address shared verticies directly
+
+Extensive polygon mesh the vast majority of polygons share an eddge
+
+18 + (20 = 4 vertex list entries * 5 edges) to store the vertex list
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

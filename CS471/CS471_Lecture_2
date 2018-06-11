@@ -1,0 +1,15 @@
+Old operating systems from real old days were basically single process running until it was done... then you loaded another one in. Then timesharing came along and that's the ability to switch between processes-->context switch. Saves the state of the process that's being thrown out of the CPU and restoring the state of the process that's going in...
+
+When we get to process mgmt, we need hardware help. Interrupt vectors (set of memor addrs stored in memory location--stores interrupt handler--interrupt handling). Interrupts are mechanical--they interrupt the cpu
+
+Interrupts happen all the time.... errors as well as things like mouse click. Whatever the cpu is doing the cpu is interrupted
+
+
+Direct memory access - didn't use to do this---data used to be sent to cpu
+
+On Peripheral Devices there's an IO processor.... allows these devices to get to and from memory (by using DMA)
+
+
+We want to do everything we can via hardware. Accessing things in software is much too slow
+
+Profiler: tool used if you need to speed up an existing piece of software

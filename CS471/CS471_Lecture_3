@@ -1,0 +1,230 @@
+Process Mgmt
+
+A process is a program plus the resources it needs to run--including the environment, not just memory.
+
+We have a number of schedulers med, low, high level... they all do different jobs.
+
+Med level scheduler just selects a victim: "I'm having a problems, we need to get rid of stuff... select a victim. I'm short on resource 5, starting to have trouble, gonna deadlock, not going to select a victim that doesn't have any resource 5... need one that'll help me out of the current crisis"
+
+Processes have states
+
+Ready queue has everything it needs to run except the processor.... that doesn't mean that's all it's going to need (processes may need more as it runs), but it has everything it needs to start.
+
+
+Low-level selects which processor is ready to run...
+
+New -> Ready -> Run -> Term . . .  there is accounting for all of these states
+
+Input/Output is very slow compared to executing instructions --> So, they created a blocking call, which 95% of the time is I/O. There are some blocking calls for interprocess comunication... 
+
+Even page faults are I/O calls.
+
+There has to be some way for process to be taken out of run state, put into blocked list... awaiting completion of whatever it is that's blocked. When it goes to the blocked list, a context switch is invoked, wherein all the state is saved in the area of memory called the PCB=process control blocked (includes program counter, open file pointers, all registers, cache memory, etc.). States then changed to blocked.
+
+Whatever caused the block (the I/O), it goes back to ready state... where low-level scheduler moves to run. This is a premptive system...
+
+There's two ways out of Run state: finish and die... or blocking call that throws me out.
+
+What if I have a heavy compute process? It can sit there and run... but, the first premeptive system was made for blocking
+
+First thing programs do is load stuff--gotta get data from somewhere..
+
+
+We have to make it fair though so heavy computes don't dominate the system. Now we have an interrupt driven time slice... 100ms is a typical time slice--can be adjusted in your environment depending on what you're doing.
+
+
+
+In the business world... 80% of the time you're running the same stuff. So, this standardization can allow for adjustments for better throughput. 
+
+
+If time slice throws out of Run, it goes right back to ready... not to blocked list.
+
+
+
+New processes selected by high level sccheduler... given resources for what they need to start. Dispatcher, low-level scheuduler picks it off the ready queue and put in run state... to get out of run state gotta finish one way or another... can be blocked or thrown back to ready by time slice... (both ways out of Run are context switches).
+
+The blocked list never gets full... not really a queue because it's independent from everything else. There's no actual list... the blocking process stores the state of the process in its own PCB. Not a data structure.... buuuut the Ready Queue is a data structure.... because there's logic to who's picked.
+
+This is all the heart and soul of process manager.
+
+A couple of things to worry about:
+
+times
+throughput (how many jobs we can get done in an hour)
+turn around time... how long have to weight from start to stop of process
+
+
+Note: jobs and processes are not exactly the same
+
+
+One thing else about processes: the run time stack.
+
+If you run out of free space there will be an error message (from an array of error messages).
+
+e.g. runaway recursion... each function call is an activation record... with a pointer down to the text (actual code)
+
+
+Local vars are in the activation record
+
+Runaway recursion you run out of memory... runaway looping building a linked list you run out of memory
+
+DIVERGING
+
+Most sorts are combos of different sorts (e.g. quicksort and insertion sort)... quicksort is good for large sets of data (recursive sorting). Once you get to smaller sets, it's not as effective to use a quicksort... better to use an insertion sort for small sets
+
+Stonewall Jackson axiom: To mistify, mislead, and surprise
+
+
+There are function calls that can put you right on the block list... e.g. delay(2.0) ... artifical block list. But, you don't go right from block to run... you go back to ready list and must wait. So, not good to use artifical block for scheduling.
+
+
+When we select who gets to run next we have simplistic very fast algorithms. In the old days when you had a single processer... the OS was exectuing on that processor and nothing else was happening. The OS makes good decisions quickly not great decisions slowly.
+
+
+PCB has process state... and process number, which is made up of three parts. Process numbers in general are not unique (you have p1, p2, p3... I have p1, p2, p3). But, process number has a user number that makes it unique. Third part makes it known whether the process is a parent or a child.
+
+In Unix enviornment there is the fork system call that generates a child process from a parent. The code and open process list and registers are identical... but there is an if test in the middle... if parent, go do this... else (I am child), go do that. They do this through process number... parent process number is same as child. Parent has nonzero "am I parent" flag and child has 0. 
+
+Literally the Unix model is I fork/create a child to go do something special and i can do something in parallel while child is finishing..
+
+In Unix parent can't quit until all children are done. What you find in child processes a lot is if it can't finish there'll be a goto or goto end and it'll pass some status like "I can't finish" back to the parent. Some parents have the ability to kill off the children, otherwise they'll be hung up forever... that's the unix model.
+
+There are other environments (Ada language, e.g.) where there are tasks that are totally independent of the parent. You start them and they do their own thing... still, parent can't be finished until children... so parents will try to kill the children off... if they're already dead they don't do anything.
+
+Program counter and all the registers and stuff (including cache memory) is loaded in PCB, because you may have all this data... when you move stuff you move by block. Not doing an IO call for each piece of data... 
+
+Memory limits (base and limit registers); open file list; priority (not all enviroments have priority)... dispatcher picks stuff based on priority (IF that's part of the deal).
+
+On our system there are 32 priorities--top 16 are system, lower 16 are user, lowest of low are students and prof.
+
+All system processes are higher up. There are some environments that will let you attempt to change your priorities. But, to be clear, those are SUGGESTIONS to the OS, and the OS doesn't have to obey.
+
+In C++ there is something called a register variable... puts register int directly into register. You can use this for efficiency for loop counters (for example).
+
+--
+
+People thing GUIs were created to give cute little menus; in fact, this is just a side effect. We just wanted to be able to do multiple processes with multiple screens.
+
+For the GUI you have a queue of events... how to handle events.
+
+Applictations have to communicate with windowing enviornment in order to display stuff. We establish a connection to the window server. Then we create the graphical objects (GO's), many of which are pre-built--widget set/gadget set. So, in many cases you just grab from library, modify the widget how you might want (change text/colors/etc.). 
+
+Register events and callbacks... there are 32 different events on any GUI. 25 or 26 are the same across different distribution. You have to tell the server which event you wish to hear about... default events is 0. 
+
+Expose event opens a window and application redraws what's in the window.
+
+
+Press any key-> key press event
+
+You have to tell the system what events you wanna hear about... very first expose event is sent to window... other than that, nothing else is sent by default.
+
+Callbacks.... that little exit button that you press. The callback is the function to be invoked when that button is pressed
+
+
+Every call back needs to be registered.
+
+
+Now you have to realize the graphical objects... that means bringing up the GO's that I want to bring up... the rest can come up on command.
+
+
+Event loop... all events are put into an event queue in the order they are made... each event becomes part of a switch case statement... and is pulled off the front of the queue. Event loop is infinite until killed/quit... exit function is in stdlib.h
+
+
+
+All this is interrupt driven.
+
+
+Window manager (part of the window server).... (in Linux it's a sep process). 
+
+
+Goal: minimize interprocess communication. Done by bundling commands and asynchronous stuff
+ Another goal: move functionality to server (not application). e.g. colors, fonts, etc. We don't really want to send this kind of stuff as a parameter to a message... it'd be better for it to be in the server and we'll get it by sending a font number with aim of reciving the specific font. Access via number is done simply to reduce the communications amount (smaller communications).
+
+That was GUI 101
+
+
+OS has to deal with this.... has to pay attention to the communications. The GUI is invoking commands from you to the system because the window server sits on top of the OS.
+
+
+Communications is an issue.
+
+
+
+--
+
+
+When you fork a child, there's another command called wait. Wait hangs up in the block list. Interprocess communication. Established a rendezvous.... if the other process isn't at the rendezvous we go to the block list.
+
+
+Long-term vs short-term scheduler.... much of the choices are made by historical data. 
+
+
+
+exec . . . an important entity when you create/fork a child. It allows you to change the guts of the process to allow you to have another set of code put into it. exec ve is the most popular one. There are a bunch of exec calls.... 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-

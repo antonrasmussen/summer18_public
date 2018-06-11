@@ -1,0 +1,96 @@
+Windowing environments were built to manage screen space.... menus and graphical objects and things of that nature are just sort of side effects of dealing with virtual screens
+
+Every windowing program on the face of the earth has 5 steps... 
+
+1. Init
+2. Build Graphical Objects
+3. Register Events and Callbacks
+4. Realize Graphical Objects
+5. Event Loops
+
+Problems were handling input, output, and minimizing communications.
+
+Handling input early in the game was not interrupt driven...
+
+input comes from keyboard, mouse (a locator device), files, etc.
+
+Early way was to poll devices.
+
+Check out difference Real-estate vs click-to-type modes... there are other events
+
+Useful one: property notify. 2 processes wanna talk and you need to syncronize. Producer/Consumer. Producer generates data and the consumer consumes it
+
+Property is a data structure hanging on a window... producer updates the property and an event is sent to the consumer letting the consumer know that they can read it
+
+Handling output is simple... when window becomes exposed i.e. you can see it... the windowing system notifies the application system that you can see it
+
+In most windowing environments the window manager the windowing system is part of the system
+
+In X windows it's a policy free system... the window manager is a sep process from the windows server... therefore you can put in your own windowing system
+
+better windowing systems than X: TWM ... Motif Window Manager with Motif widget set
+
+Now it's an event system that's interrupt driven
+
+
+--
+
+
+They took steps to speed up interprocess communications
+- bundle commands together within a message (if we can): ideal for remote
+- communicate asynchronsly
+- move functionality to the server (fonts and colors don't reside in application program.. they reside in server)
+
+Wherever the pictures are gonna be is wherever the server is... if it's on different boxes, you have to set up network messages
+
+Remote things can be LAN or IP, depending on where the networked server is
+
+
+Next thing you have to do is register events and callbacks... there are 32 events... 27-28 events that every windowing system has
+
+
+Call back is registered... it tells the system what functions you want to call
+
+
+
+Realize = draw the objects... the ones you want to see at that time. The rest can be accessed as you go, you don't draw them all
+
+The event loop is very simple... it's an infinite loop in the programs... it's has a specific action to get out of it... you won't get out of it by default
+
+1) go get event off front of event queue (a data structure with pointers to other data structures)
+
+Gotta see what type of event it is: Switch case statement: Is it an expose event, motion notify? and check to see what you'll do for each case
+
+
+HW For Tuesday: Look at the rubberband.c program .... we're gonna go over it.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

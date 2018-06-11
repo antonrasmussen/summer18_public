@@ -1,0 +1,156 @@
+Finishing Hardware
+
+Screens' frame buffer used to share main memory... 
+
+Photos don't compress well because they do not have a lot of the same pixels
+
+Drawn images have many of the same color pixels, so they compress well
+
+JPEG standard is pretty impressive for this reason, since it compresses by 10
+
+Since memory got cheaper and faster, we have same memory in frame buffer as everywhere else
+--> frame buffer is still seperate entity
+
+GPUs are linear algebra machine.... pretty much only purpose it is used for these days is video games
+
+
+----------------------------------------------------------------------------------------------------
+
+Coordinate systems: x, y = 2D.... screen buffer deals in 2D because it has a depth of 1
+
+3D entities are an illusion--view volumn objects projected onto a 2D screen
+
+projections -> things that are further away look smaller.... this needs to be programmed
+
+Blue prints don't do this.... they look funny
+
+
+
+
+We have coordinate systems:
+
+biggest one: real world coordinates (e.g. a map laid out in miles)
+
+Now we have windowed coordinates: not window as we usually thing of it -> refers to an area of interest in the real world
+
+still in real world coordinates, but bounded
+
+Map of Little Big Horn is an area of interest for real world coordinates
+
+We have to get the area of interest into a viewport on the computer--> the viewport is what we typically think of as a window
+
+
+Graphics term is viewport
+
+Windowing programs weren't meant for mice and all that.... meant for managing screen space... could divide screens up (like tmux), but that's not as nice as making sep. virtual windows
+
+If viewport is not right proportion it's gonna look distorted. It's always better to make the viewport/window the same size as the image... note the size of the viewport is in pixels, and the pixels are relative to the viewport
+
+
+
+Origin is the upperleft corner.... positive y is down.... and pixels are relative to that.
+
+Then there are screen coordinates 
+
+
+Ultimately we have to put pixels in a viewport mapped onto screen correctly
+
+
+
+COURSE PROJECT Instructions:
+
+
+Friday is history day
+
+
+
+Very simplistic view of Custer's Last Stand (Battle of Little Big Horn)
+
+Specific requirements:
+
+need glut32.dll to make OpenGL stuff for mouse to work
+
+Images are of little big horn river
+
+What we have to do is:
+
+(piecemeil)
+
+1st task: Open a window and put the map in the background, to draw stuff on top and move it around.... erase it if it's moved
+
+2 techniques... if you can turn map into actual background, window mgr deals with erasures... if not. save, erase, replace
+
+Make a function that deals with movement.... draw until in certain place, move it somewhere else
+
+
+2nd task: move a unit.... repeatedly call this same function for everything that moves. This is the big scoring issue
+
+3rd task: create a legend. There's 50 units.... 36 Native American, 14 calvery. The legend only needs to have no more than 6 entries
+
+make little rectangles, fill with color... each cav unit has rectangle with letter... 12 companies A, B, C... etc., HQ unit (with asterisk), packtrain unit (have a bunch of mules) (different symbol)
+
+native americans--two identified native american units. One with a G (for Chief Gall) and one with C (Crazy Horse), one for standard native american unit.... legend should go in upper left hand corder
+
+4th Task: put a clock (digital): when time strats... movement triggered by mouse button: starts movement in 10 min increments... don't load them all, only reload the ones that actually move. 
+
+Clock is an array of digits, draw it in the next window... click it, get the next time. Use a good size font
+
+
+Each row in data is a unit, each col is a time slice
+
+
+
+
+
+The easy way to do this.... edit the data file.... chop out just integers... read into two d matrix... slide over a col for each mouse click...
+
+
+read all data in first... then access the data to do the movement and the drawing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

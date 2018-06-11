@@ -1,0 +1,41 @@
+Last Subject We look at: Colors and Dithering
+
+Monday Review for Midterm
+
+Tuesday Midterm
+
+Wednesday Go Over Midterm
+
+RGB - - additive primaries
+CMY - - subtractive primaries
+
+Early color printers --  3 bits = 7 possibilities
+
+
+Always a desire to take color imagery and put it in a black and white environment... newspapers do half toning. Variety of circles either completely black of completely white
+
+Octree based circles... not something we do with computers. Strictly for newspapers. They weren't too concerned with colors.
+
+Colors now in pape = advertising b/c they pay for it
+
+Thresholding and Dithering
+--------------------------
+
+Thresholding  . . . colors sequentially numbered
+
+Dithering... trade resolution for colors
+
+---------
+| o | o |
+---------
+| o | o |
+---------
+
+---------
+| 1 | o |
+---------
+| o | o |
+---------
+
+
+Patterns are always square for dithering. Anything bigger than 4 x 4 you've cut up the image

@@ -1,0 +1,61 @@
+Project 1 -- cpu scheduling
+P2 -- memory mgmt
+P3 -- file system
+
+Basic memory mgmt hasn't changed much in a while
+
+
+
+
+This class involves a lot of interacting pieces
+
+OSes have to make decisions all the time. Remember -> Speed is more important than best. OSes will make the decision they can make the fastest--not necessarily the best possible outcome. This is a hold over from the old days w/one CPU. B/C when the OS was doing something, nothing else can occur. 
+
+Early systems with multiple CPUs had VERY expensive hardware.... needed to load balance so that the expensive stuff was used. Never got this right. Now processing is much cheaper. Master/Slave relationship now.... load balancing is out the window.
+
+User of OS could be another machine, not just a person--it's an outside interface.
+
+Traditional view: resource manager
+
+First real digital computer ENIAC design = Vonnueman architecture ==> check out Mark I on Wisconsin
+
+
+-------------------
+
+Blue moon = the second full moon in a month.
+
+Validation - am I doing the right reqs?
+Verification - am I doing the reqs correctly?
+
+One of the biggest problems is managing the main bus--> bus architecture is the big bottleneck
+
+memory mgmt... doesn't send single values --> sends a block at a time into cache memory for easy access by the CPU. Also we use bus multiplexing
+
+
+-----
+Cont
+-----
+Addr (64 bytes)
+-----
+Data (128 bytes)
+-----
+*****
+Power [Not part of functionality]
+
+Bus multiplexing is taking the address lines after the first clock and using it for more data lines
+-----
+
+
+
+
+Variation in "standard" OS services 
+
+Distributed systems are network connection, not multiple CPUs on one machine--that's parallel system
+
+
+
+
+
+
+
+

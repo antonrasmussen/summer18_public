@@ -1,0 +1,50 @@
+Critical process
+
+Shared memory . . . producer/consumer problem. Fairly famous problem where you have one process producing something that another process is consuming
+
+We want to synchronize the processes so that read/write can happen. We also have a mutual exclusion issue
+
+
+Producer
+.
+.
+.
+
+(1)fetch(i)
+
+
+(5)increment(i)
+(6)store(i)
+
+.
+.
+.
+
+=====================
+
+Consumer
+.
+.
+.
+(2)fetch(i)
+
+
+(3)decrement(i)
+(4)store(i)
+.
+.
+.
+
+CONCEPT => Critical Section
+
+
+wait(s)
+ while s <= 0 Loop i
+s = s-1;
+
+signal(s)
+ s = s + 1;
+
+
+s is an atomic variable--once we start doing things with s, it will not be stopped until it finishes.
+

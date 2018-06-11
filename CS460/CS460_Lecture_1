@@ -1,0 +1,233 @@
+How to make special effects--and how hard it is.
+
+Assignment for tomorrow: read syllabus, read classroom rules
+
+No class this THURSDAY!!!
+
+Some extra time off depending on what we find
+
+Last class is June 23rd... not a lot of time. 
+
+Only 3 grades: midterm, final, project
+
+Summer project after basic computer hardware, before advanced graphics hardware - - - After coordinate systems New #3
+
+--
+
+OpenGL Project: Graphical Representation of Historical event--Little Big Horn. Brass cases can now be used to track specific gun
+
+OpenGL is a free program/marketable skill
+
+
+Midterm is in three weeks
+
+
+--
+
+
+Reason for old Texbook: 85% of graphics algorithms were made in 1950s. Big change in today's enviornment--> bunch of stuff done in parallel
+
+(and a few hardware innovations)
+
+The techniques we're gonna look at are old. Latest edition of the book discards classic algorthims and goes into modern hardware stuff--but this is not an EE class. 
+
+We don't do real time photographics due to complexity of environment
+
+Move stuff around: translation
+
+There's no such thing as an area light source in computers--all point light sources
+
+Visible surface determination, surface detail, etc. vast majority of these calculations are floating point and have to do with lighting shadow and shading.... modern screen is 60fps... but, for animations, we have to calculate new shadows, shading, lighting, for each pixel--approx 3 million--and has to be done 60 times a second. 
+
+Games/simulators are noticebly not photo realism--must be in real time, so picture must be made to be as good as possible since real time responses are required. Short cut techniques taken-->everything is polygon based (due to special polygon hardware)... not something to use in computer aided design, which requires more stuff for curved surfaces.... not gonna deal with polygons (isosolese triangles), which is how games work, if your designing the next piston, for example.
+
+Best graphics card has 2000 processors in it, doing stuff in parallel-->fine, except that they're working with polygons
+
+Movement away from special purpose processors to general purpose ones. 
+
+
+Graphics projects are very tedious. Reign of Fire Dragon/Inception--> we will learn how to do this 
+
+Dragon in Reign of Fire was harder than inception b/c a fake dragon had to be put into a real environment
+
+
+
+
+--------------------------
+
+
+Early display devices
+
+
+Ws on tops of Ms
+
+
+First TV image sent in 1920s
+
+Heart and soul of TV was CRT--Cathode Ray Tube (we'll call it a gun)
+
+Slowest refresh rate is 25fps, before notice of flicker--> lines on recorded TV has to do with non-synced refresh rate
+
+
+
+Movement of gun images was fixed, but voltage was controllable 
+
+Analog signal (modulated sin wave) were samples
+
+2/3 of human sight is green, and rather good for an animal
+
+
+We are more attuned to brightness than color--monochrome
+
+Brain fills in gap in eyeball sensors
+
+JPEG deals with luminence and chrominence
+
+
+With pixles--> position gun with move to and draw to command--> vector graphics. (thing move with pen up... draw with pen down)--> techniques like this are used for 3D printers
+
+Raster graphics: what we use today
+
+TRS80--64k memory, could only draw lines... characters as lines..... eventually got into raster/bitmap graphics
+
+Memory for color-->screen made up of dots. 
+
+CPU/GPU ==> Frame buffer ==> Video Controller ==> Screen
+
+"raster units" term--doesn't really tell you anything. So, they called them "picture elements" ==> pixel
+
+
+Color added three more guns
+Old video controllers are DAC ... digital/analog converter
+
+"digital screen" is in some sense a lie. The screen takes digital signal and actually makes analog
+
+VC reads all vals from frame buffer and sends it to screen at X fps
+
+720p is progressive do every row
+1080i is interlaced ... every other row
+...
+CRT is the best picture you can get... but, big, bulky, consumes a lot of energy
+
+
+
+Color added three guns: Red, Green, Blue . . . could control color of pixels--look into shadow mask
+
+Pixels are small but you have very fine control over brightness of individual guns
+
+Four bytes per pixel.. R,G,B, and alpha=blending value . . . . if alpha is 1.0 = 100%, it becomes all new color
+
+Blending comes in a lot for what's called anti-aliasing... we fool our brains to think lines are straight
+
+We have better traversing abilities than cats with our eyes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

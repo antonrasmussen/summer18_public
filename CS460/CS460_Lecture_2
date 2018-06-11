@@ -1,0 +1,213 @@
+Project is now up on the website
+
+Three images in different formats
+
+We (almost) finished CRTs last class
+
+There is a misnomer in the outside world. CRTs have depth... guns are some distance away... consume a lot of power/generate a lot of heat... best picture you can get--always have been, always will be. Best for control
+
+They came up with a flat screen CRTs... not the same as flat panel LCD or Plasma
+
+
+Old CRTs were round so distance from guns to screen was same all around; when they went flat screen CRT, they had to change the scan rate internally... slower in the middle, faster on the outside
+
+Flat panels are the new kids on the block: LCD/Plasma
+
+
+---
+
+Now... look at flat panels
+
+5 or so years ago plasma was much better picture than LCD. Plasma was close enough to CRT to get away with it. LCD was the "poor man" on the block.... LCD has gotten better and better... Plasma is much more expensive and not as much better as it used to be
+
+now it's hard to tell the difference in terms of quality... you'd have to be a cat to tell the difference
+
+similar to high end audio and how it's out of human hearing range
+
+Plasma fails quicker than LCD... Plasma fails after 3-4 years of avg use... 2 years with a lot of use
+
+LCD is a lot tougher both in longevity and physically
+
+We don't see Plasma on laptops .... except for Sun's Sparc Unix Machine	$20,000
+
+
+They often say there are three kinds: LCD, Plasma, and LED... but LED is LCD... only diff is backlit source. Used to be flourescent tubes... now it's light emitting diodes. Plasma is and willy likely remain only backlit flourescent tubes
+
+
+
+How do they work?
+
+
+
+LCD is a very sophisticated set of polarized sun glasses.... looks like a grate with horizontal rows. If you put one screen vertical and one horizontal it'll go completely dark
+
+LC part of LCD are long, thin crystals whose direction changes by putting a current on it. So, essentially what you end up with is a set of programmable slots. This is also how, for example, wrist watches work... there's a slotted background, and then a programmable turning slotted sheet that can block out light when needed... LCD has two levels... fixed level and the programmable level where the LC actually exists to be programmed.
+
+LCD was originally monochrome
+
+
+[R][G][B] = one pixel
+
+By modifying the amount of each RGB you can change the color.
+
+
+On a real machine you want an aspect ratio as close to 1 as possible... dist between horiz/dist between vertical
+On older machines aspect ratios were not that close to 1.... there is no machine that is exactly 1, but they are all very close to 1
+
+
+the LC is vulnerable.... put thumb on screen, throw it away
+
+
+They figured out that if you have a color display, you can look at that for more hours a day... unlike the monochrome displays that blind people
+
+
+
+Gas plasma... what is it? Very sophisticated Neon sign. Neon is an inert gas. When you put a voltage on it, it will blow. More voltage, the brighter it gets... How to get color? Impurities. Cobalt for blue... copper for green?
+
+same issue with LCD--> making it small enough
+
+Difference: don't see grid of wires on screen (so small). Put potential on col wire, and row wire and you get the particular subpixle (RG or B), and the amt of voltage controls how bright it is.... it makes a nice picture. But, over time they start to break down:
+
+Chemical changes
+Plastic "honycomb" grid starts to fail an break down
+Depends on how much you use it-->between 2 to 4 years
+
+LCD is now almost as good as plasma, and still cheap in comparison to Plasma.... Plasma is very vunerable to damage
+
+
+Plasma is utilizing JIT manufacturing, which requires a lot of analysis
+
+
+Hardcopy technology--printers.... dot matrix (old days), not a very good image
+
+Then came letter quality printers-->impact printers.... originally typewriters... first arms, and then the ball
+
+Still uses for impact printers: multi-layered forms
+
+Modern impact printer: daisy wheel
+
+Gotta be careful with ribbons from printers -- e.g. government/classified stuff
+
+Now:
+
+InkJet and Laser printers.
+
+Original InkJet, not the InkJet we have now. IBM built a printer that would squirt ink out of changeable nozzle.... many gears and chains to literally draw the character. VERY slow pages per min... printer cost 1000s of dollars and broke all the time
+
+Three to four nozzles.... (fourth being black).... don't use red green and blue pigmants (those are additive primary colors that work on a black background -- black is abscene of color).... now we are printing on white sheet of paper, so we need to use the subtractive primary colors: cyan, magenta, and yellow--because white is all color... since black would require all three color guns to go at once, it would drain the ink quickly... so, modern ones come with color cartridge and black cartridge--system automatically switches
+
+Resolution of these things are frighteningly good... 2400 per inch
+
+Printers are cheap... cartridges aren't... but they make refill.... use orange or pink paper and you'll get crazy stuff
+
+
+
+
+Laser printer is a different animal:
+
+when they first came out in middle of 1990s--monochrome only--to print text--that printer cost $4800---color was $10000.... now good color laser printer a few hundred bucks
+
+
+
+Still uses CYM, but the way it works is quite different from InkJet
+
+
+
+Why did it take so long to make combined laser printer and copier?
+
+Underlying tech for putting image on paper is the same
+
+
+|----------------------|
+|       Image          |
+|----------------------|
+|       Engine         |
+|----------------------|
+
+
+Scanner gets image from scanner device.... puts in frame buffer (memory). Printer gets image from network to frame buffer (memory)....
+
+Why these weren't integrated from beginning is weird because it's the same engine and process.
+
+
+
+Tomorrow: Anti Aliasing and Coordinate system. Thursday, remember, no class!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

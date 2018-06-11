@@ -1,0 +1,40 @@
+Look at Notes for first part of class: DEADLOCK
+
+Wasn't paying good enough attention
+
+
+
+Memory mgmt -- historically for too little memory
+
+
+
+For a normal process that starts... you write it in your lang, include whatever libraries u want, let compiler translate into obj code.
+
+Obj code has addresses in instrucs and are offset from very first addr because they haven't been compiled yet
+
+Linker gets needed libraries/ and translated routines... linker hooks your object code to those. Sometimes you have linked things as well, you own header files... SO, you have system linkage and yu have your own stuff.
+
+Linked to object code, then we get into the loader.
+
+Loading program is told by OS to load this thing somewhere. The loading program starts putting things into main memory.
+
+In the old days the whole thing had to be contiguous--> it was easy to find offsets. Allocation was fairly simple
+
+ex if first add is at 1000, loader adds 1000 to all addresses and puts them in memory
+
+From that you get the binary image
+
+Writing exception handlers to deal with type mismatches on reads...
+
+
+If you have a memory exhaustion: msg stack overuns heap or otherway around
+
+One of the problems is address checking
+
+Checking the address: relocation register
+
+Stopping at multiple partiions
+
+(Project 2)
+
+Used in heap mgmt of run time stack

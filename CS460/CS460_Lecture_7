@@ -1,0 +1,128 @@
+Transformations
+
+Scale
+Rotate
+Translate (to move something)
+
+They come in 2D flavors where I'm playing on the xy plane, bc ultimately I will project stuff on an xy plane
+Also come in 3D--done in 3D space
+
+heart and soul is representing matricies--multiplying matricies together
+
+Don't need to know how it works technically b/c hardware does it now
+
+But, there is a layout of matricies
+
+in OpenGL there is a stack of matricies... put matricies in a stack and multiply them together
+
+
+
+We look at 2D scheme first
+
+Individual points are represented by x,y
+
+Typically we project on to the xy plane eventually mainly because the screen deals with xy ... projecting from a 3D entity to 2D screen; when you start with 2D it's just 2D to 2D
+
+
+Let's look at scale--scale is the simplest
+
+2D scale
+
+Scaling factors are floating point...
+
+Translation is movement... it's all relative: x + dx, y + dy 
+
+Gotta use a 3 x 3 matrix
+
+On the hardware it's going to be formula driven 
+
+What we want to do is come up with a grand T (grand translate).... /Do this once... then apply it to points that define the object. So, we do translates before we do scales or rotates.
+
+
+
+
+Getting back to problem of movement (b/c there's movement in scaling and rotation)
+
+
+Point about which we rotate does not have to be part of the object... it's arbitrary
+
+
+Exam question is going to be about ordering matricies
+
+
+Any translates in the stack of matricies that are side by side are added together... this lessens the number of matricies to multiply during the derivation of the grand   T.
+
+
+
+This is all 2D.... what about 3D?
+
+
+3D has it's issues... especially in rotate. We still have the same issues about using bigger matrix for translate... instead of 3x3 it's 4x4
+
+
+
+There is a formula--very extensive--for turning any line into an axis for rotation about that arbitrary axis.
+
+
+
+3D transformations in most environments..... the 3D functions are typically scaled down to 2D. Ultimately we project onto the xy plane because that's what we draw with on the frame buffer. Typically z = 1 instead of z = 0 because we don't want to divide by zero. This is hidden from the user. But, this is especially important for projections.
+
+
+Projections are only applicable in 3D environments
+
+
+Two flavors: parallel projection and prospective projection
+
+
+If the projectors are in parallel: parallel projection = orthographic projection -> these are the blueprints. Absolute values. These are used to do design work, they are not realistic images. But they are absolute values. Also used when you have projected something on an arbitrary plane and then you want to see it. E.g. texture mapping
+
+Older books will call this orthogonal
+
+The reason this is important is because this is the one that projects onto the display.
+
+
+The obliques and cabinets etc are just mathematical exercises
+
+
+
+
+We have clipping issues with these projections but also have to consider front and back clipping... we have what's called view volume, this can be anywhere and is what is projected onto the screen--> the xy plane. In an orthographic projection it's very simple: just plot the xy and ignore the z.... depth has no impact.
+
+Perspective projection is realistic... things further away look smaller
+
+The whole thing is artifical... there's no reality in this. Movie graphics don't look real... they look like what humans would think is real...
+
+
+A lot of these things are not made to be real, they're made to entertain the poor dumb humans... we will not view movies the same as when we walked in this class
+
+Tomorrow: come to Price's Office: 1100 A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

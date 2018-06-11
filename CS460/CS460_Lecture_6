@@ -1,0 +1,167 @@
+No class Friday
+
+Still in primitives
+
+Characters... made up of little line segments
+
+Resolution used to be terrible  320x200
+
+With vector graphics you can actually draw straight lines...
+
+We haven't gotten to how you actually solve anti-aliasing issues
+
+
+Characters, first you have fixed width fonts... you have variable width fonts... new kid: variable sized fonts
+
+Skinny letters look further apart... and in fact they are. This is a holdover from the old typewriter layout
+
+If you want double justification you do extra blanks between words and hyphenated words at end of line (word processing)
+
+When they got into the modern word processing they had variable width fonts... what that meant was that you were going to have different numbers of characters per line... here you're dealing with images (unlike a typewriter) so you put the character side by side but the word will be different length bc letters have variable width. If you want justification you change the size of the blank between words so they were all the same.
+
+Making the fonts: you have files of fonts
+
+In old days you used to had files that had the character images in them... you won't see every size because some don't match up well with current resolution. This problem has gotten less as the resolution has gone up. 
+
+Characters have to be lined up on regtangular grid... but what you see on the screen isn't necessarily what you see on the paper. the screen is not as easily dealt with as what you'd get on the paper
+
+Now they have come up with variable sized fonts.... new kid on block. They've gone back to the original way of dealing with characters... characters are now little lines.... this leads us into a thick primitive.
+
+How do I make a line that's thicker than 1px wide... conceptually a line has no thickness. The thinnest line you can have on a computer is 1px wide
+
+What if you want it thicker? Easy way: pixel replication. Hard to do if it's diagonal or some other angle... easy for vertical or horizontal. But, if you're doing a curved line... like a circle... as the circle gets sideways, where it's a mild angle, it gets screwy... how do we make a thick primitive in this regard?
+
+For a circle it's just filled like a polygon.... e.g. for a formula driven curved line
+
+Then they came up with some very fancy hardware: extense hardware. A bounding box. Hardware that determines whether a pixel is inside a bounding box... you set the xmin, xmax, ymin, ymax... The hardware is square, not rectangular. You can tell if any pixel is inside the box in a hurry. We use this kind of stuff for visibile surface determination of polygons... match two bounding boxes to see if they match up. Old way was with sorting, but this is terribly inefficient.
+
+Extense hardware to create a pen... to create a pen point.
+
+
+There will be a square shaped pen and a circle shaped pen... we draw a thick line with the pen. Square is easy to deal with, but circle is preferred because using the round one causes less overlap effect on the verticies. You'll see that a lot of thick lines on paint programs has rounded endpoint lines for this reason.
+
+Differential analyzer: floating point entity that puts the rounded endpoints on the lines. (modern)
+
+Really, though, modern pen environment has both... e.g. we may want a straight edged line with square endpoints.
+
+Pixel replication was the cheap simple way but you were stuck on integral multiples of the original size. With the extense hardware you're good to go.
+
+
+--
+Anti aliasing
+
+The technique is memory AND compute intensive. Many algorithms space vs time butt heads against one another. Pick what you need based on hardware. This, however, is intensive on both... it's based on how the human sees.
+
+You would never think this would work, but it does... prob. doesn't work for cats, but it works for us based on how our eyes and brain blend things together--makes the line look straight.
+
+This would work with any thickness of line, but we assume 1px for our example.
+
+Assume pixels are squre.... the blend is has to do with the ratio of how much of the pixel is being covered.
+
+
+NOW: Clipping of primitives
+
+You've got a rectangular viewport... if you draw a line outside of the viewport, you have to clip it to the viewpoint.
+
+Now you can resize viewports... in old days they were all rectangular
+
+Microsoft decided they wanted a round window for a specific reason... this meant that you could have a window of any shape... what did they want the round window for? A clock! Hahaha.... to make it meant that you could have any shape window. 
+
+You're gonna have x = xmin for one of the lines etc... these are equations that decide the four sides. So, you end up dealing with simultaneous equation solving to determine where the thing crosses the edge of the viewport. What makes this harder is that you have limits on the viewport.
+
+Easy way to deal with lines is to just have the endpoints, instead of the infinite line equation y = mx + b.
+
+Clipping is a simultaneous equation solving entity... we want to reduce this problem. We would have to do four simultaneous equations 
+
+For a circle it's easier... 1 real root/1 imaginary root, hits on edge... 2 real roots... goes through... 2 imaginary roots, misses circle
+
+
+Cohen Sutherland algorithm for dealing with straight lines. If you have a curved line you have to deal with intersection calculation for every intersection.
+
+
+Nobody really uses Cohen Sutherland anymore.. but it's taught in every graphics class still
+
+It uses bitblip hardware.... uses bit positions... has things that are known as outcodes.
+
+This is how the cohen sutherland algorithm works... (REMEMBER FOR TEST)
+
+
+Two concepts: trival accept and trival reject
+
+Trivial accept: both endpoints of line are in the center box (viewport)... this is like tennis... the line is in
+
+Trivial reject: if they are out but they are on the same side... (both left or right or high or low)
+
+
+May have to clip to determine if it's trivally rejected
+
+Look at swap function
+
+Psuedo code for algorithm:
+
+outcode(P1)
+outcode(p0)
+Trival acc? -> yes -> draw(p0,p1) -> quit; -> no -> quit;
+Trivial recj -> yes -> quit; no -> is P0 in box? (If we get this far, one or both of endpoints are not in box... one might be)
+If p0 is in then swap; if no -> clip(p0)... clip to boundry of first one we run into in same order as bits High Low Right Left,
+then go back to the outcode(p0) to generate new outcode... continue 
+
+Worst case, four intersection calculations... algorithm helps to save not having to do all four intersections
+
+Quadrant curves have short cuts but arbitrary curves need to do all sides
+
+
+
+This would be looped for all lines
+
+
+If both all 0s, trivally accept
+If both out on same side
+
+do a bit wise AND ... if you get a non zero result it's a trivial reject. If you get all 0s out it doesn't tell you anything
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

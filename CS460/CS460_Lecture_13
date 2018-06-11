@@ -1,0 +1,227 @@
+Solids... related to CG... modeling. Diff from drawing. We've alwaus done solid modelling in this course.
+
+Been doing solid modeling in this course since 1984
+
+Number of techs... judged by 5 criteria
+
+1. Accuracy
+
+2. Domain
+
+3. Unique?
+
+4. Efficiency
+
+5. Combinable?
+
+Not all solids need to be modeled... eg. lawn art.... if not modeled, nobody would know nor care.
+
+In other places accuracy is important
+
+Domain... does the modeling handle everyting or just some things.
+
+Unique... some techs don't guarantee this
+
+Let's minimiz work for efficiency
+
+Are techs combinable... i.e. can you combine solids and something called "not solids" together to rep. another one
+
+The old cartoon dumbells... two round balls with sticks... could I model the thing as two round balls and a stick and combine them together as a single entity
+
+those are all solids
+
+you have something called a not-solid: 
+
+Imagine a cube with a chunk out of it.. a defined cube solid and a defined hole... combined together
+
+(So combinable is more involved than taking two balls and a stick and comibing them to form a dumbbell)
+
+Book lists 6 meths for making solids... actually only 5
+
+
+1st is a boolean set of ops, which is a method for combining things together.... you still need the other 5 methods to create a solid... it doesn't make solids... so, it's not a method for making solids
+
+Some of the 5 are more theoretical than others but in any case there is no one wonderful solid method... if there were the chapter would be real short... so all 5 of them have advantages in the above list and disadvantages... 
+
+here there are:
+
+1. Primitive instance - still used today; it is used mostly in castings. You have a primitive of a particular kind of solid. The example in the book is gears... not bad. You've got a gear, a gear has a center hub with a hole and a round part and it has various teeth. You can change each part... a bigger hub, bigger hole, great big teeth.. etc. SO, it's a primitive but you have some choice in adjusting. 
+
+In the case of gears you'd actually cut the gear out of plastic (3D printing) or use laser cutting to cut it out of plastic and then put it in a casting mold with casting sand and then take the thing of plastic out and fill it up with whatever you're making the gear out of... prop some form of high carbon steel--you want to it be hard not soft.
+
+So, you have a primitive that's gears... but there are different primitives. Accuracy is high in this.. but when it's taken from casting a gear does have to be clean up, shaved, etc.
+
+The domain is what sucks here... this just makes gears; it doesn't make anything else.... so, gonna have to make primitives for different things.
+
+Is it unique? Yes, the primitive is a *program* that makes gears.
+
+Efficient? To a point... it is a program so I suppose it can be made to run better
+
+Combinable, the answer is basically no. Because it's the program... can't really be connected to anything else
+
+
+2. Sweep - pioneered by the auto industry. It's basically a 3 D shape ... an entity (look at notebook for picture)
+
+Accuracy is a function of how well the picture looks
+
+Domain 
+
+Unique - yes, by defin it is a solid
+
+Eff - probably the most eff of all of them
+
+COmbinable - no, can't combine w/anything else
+
+
+3. Spatial Partitioning - a volume sub division. Prior to finding Titanic, they thought it was in one piece... actually 3. Thought about how to raise titanic ... fill it with pingpong balls, too much pressure. Find psi... take depth (feet) and divide by half. Used a stryofoam cup on outside of sub to show how much pressure... modern sub go down 2500 to 3000 feet... string inside... hull compresses
+
+Solid primitive... two flavors: orig circle, spheres; then little cubes... fill up vol of whatever you wanna make solid with these things... pre-defined prims... find the center and that's the model. To make it more officient, use an octree.. base prim. one twice is big.. one twice as big as that.. and so on... 
+
+
+accuracy stinks... but the domain is good... can do anything with it. THIS is the bad part... the rest are good to wonderful
+
+
+It is unique b/c pre defined solid prims
+
+Efficient? Within reason... I don't have quite as many.. 
+
+Easily combinable... 
+
+
+
+
+4. B-Rep = boundary representation
+
+Well, you take a sphere... it's the exterior.
+
+Accuracy - depends on what you want to do
+
+DOmain - can do most things
+
+unique? No... when defined it doesn't tell you whether it's hollow or not. Only gives you the outside. Not a unique rep.
+
+
+Effic? not particularly. if it's a complex object it's not efficient at all.... a ball? not bad... but as it gets complex eff goes down quite fast
+
+
+Combinable? Yeah, we can do that.  Imagine two solid objs... we can just see where the outside boundaries intersect. So we can make combs using this thing
+
+
+
+
+Last one: 
+
+5. CSG - Constructive Solid Geometry
+
+The popular choice out in town.
+
+In a sense, this is a improvement on a prim instance... built in are solid instances... all std shapes you want: rec solids, cubes, whatever side, height, depth are variable you set it up... pyramids, cones, spheroids, elipsoids, cylinder, all that kind of stuff is included... combined to make a solid.
+
+Now, the real world is not necessarily made up of piles of those shapes... but, we'll get to that... had a student getting engineering degree who worked for engineering firm out in town for a number of years... he was getting a degree for more or less what they are doing... his firm had a very sophisticated CSG system that allowed you to make your on primitives... it had cones and spheriods etc... but you could make your own... domain is limited? price told this guy to make three different primitives... student could make one in not that long... it takes all day to make three... 15 prims would take all week... reason? The underlying representation of this thing is a boundary rep. because they need to combine them...
+
+Unique? eh
+
+Eff.... base one yes... but as you add more it gets .... but dumbell ex would be csg..
+
+Storage for these complex shape is just niot tenable... combining odd shapes... arbitrary shapes... is gonna be a bitch
+
+Finding the intersections of arbitrary shapes is a computationally hard problem.
+
+
+
+That's solids
+
+
+This system differs from CNC machines and 3D printers b/c those machines are added a layer at a time.... laser cuters however would follow this model...
+
+
+
+We're gonna look at vis surf determ, lighting and shading, and surface detail (texture mapping) on Monday
+
+
+Final exam: TAKE HOME!!!! Turn in on final friday!!! 
+
+
+Look at realism mechnaisms for monday... 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+

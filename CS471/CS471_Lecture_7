@@ -1,0 +1,367 @@
+MUltiple partitions
+
+We've seen single partitions--right out of the 1940s
+
+when the hardware got fast enough, memory got efficient enough to time share
+
+makes it looks like we're actually running 3 or 4 things simultaneously
+
+In order to swap between processes they all had to be in main memory at the same time.
+
+All the processes that are in multiple partitions are the ready process... they have everything that it needs. Not to say we don't get things later, we do have dynamic allocation and off we go
+
+We still have some of the reqs
+
+When processes finish you get free space... a list of free space... a linked list of where the holes are in memory.
+
+
+based on when they are freed up. not sorted... we try not to sort anything in OSes... don't like to sort things.
+
+So, when I wanna allocate for a new process that comes along... the whole process has to be in memory and it has to be contiguous.
+
+But, if I have an 8k process and there are a bunch of holes, I may not be able to do it: "external fragmentation" = the breaking up of memory in to smaller and smaller (and eventually unusable) holes.
+
+Book examples are obvi more simplistic than reality.
+
+SO, how do I fix this? It's not a good ans: garbage collection/compaction
+
+Basically I am going to have to move the processes either all the way up or all the way down the memory so that we do the least amount of movement to open up the largest hold. Calls a loader to change all addresses inside a process
+
+This is a high overhead thing to do...
+
+Allocating: singly linked list. New process comes along and I want to find a spot that will fit. Now, there are 3 ways of doing it:
+
+First Fit (FF) - find first hole that's big enough
+
+Take bottom off of destination list to fit source
+
+Best Fit (BF) - Go around and find the hole closest to the one I'm looking for
+
+Worst Fit (WF) - Go looking for the biggest one. The reason this method has some attractiveness is that it leaves the biggest possible hole behind
+
+The method we use is FF because the search time is the lowest. User doesn't get a vote.
+
+
+This is the memory system used in language systems... heap.... freeing up and allocating things for managed dynamic memory
+
+
+Aside about languages: first few iter of C++ delete didn't do anything.
+
+The whole compiler was a memory link. 
+
+It wa too hard to implement something like what we're talking about in a language system.
+
+
+What we're talking about is allocation; but, we need to deal with deallocation too. Need to deallocate to figure out where we can put things...
+
+During deallocation there are 4 poss... both above and below are allocated, one above is free, one below is free, both are free
+
+If it can't find a place to fit, it just gets stuck on the front of the list... 
+
+if the one above me is free, and the one below is not... that means that one of the lists on the linked list is it.
+
+We then add our new one onto the bottom and change the size... this is done with the epointer from the bottom to the top by throwing the new value into the bottom one as the size. That's how we add it
+
+Now, what if the one below me is free and the one above me is allocated? This becomes harder. But, the easy way we do it is to then take the free one already on the LL, take it off, and then add it to the bottom of the new one we put on the front of the list.
+
+If both free... add self to one that's free on top.... then add one below me on to my new bottom.
+
+It's easy to add to the bottom, it's hard to add to the top
+
+There are some languages that do this automatically... the fact that it still exists in languages is why we even talk about it.
+
+
+"Have to take my shoes off to count to 10"
+
+
+LISP.... terse lang. But, that said, everything in memory is in a list.
+
+Allocation, deallocation, and garbage compaction is simple
+
+We don't worry about FF, BF, WF because everything fits...
+
+Memory mgmt is trivial in LISP.... one of the reasons it was used in AI
+
+
+
+THIS IS WHAT THE SECOND PROJECT WILL BE.... a multiple partition system.
+
+
+
+
+The biggest problem with this is external fragmentation. This system we developed mitigates external frag but it doesn't solve it completely.
+
+
+Still, extern frag became a cause to overcome
+
+---------------
+
+The alternative... is KINDA what we use today: Paging
+
+In the early paging systems we abadoned the need for continguous... but the whole process needed to be loaded. Now a days we only load the routines as they are called.
+
+The early paging was designed to solve the framentation problem... 
+
+
+broke things up into fixed size blocks.... had page table.
+
+Process broken into block sized chunks called pages and put them in any free block that you had... so, they could be all over the place. BUT there was no external fragmentation... could stick stuff anywhere.
+
+Paging was done as an alternative... they hadn't gotten around to figuring out that I don't have to load the whole thing, I can load stuff as needed.
+
+b/c some of this stuff is ever loaded. Ex: event handlers that aren't used
+
+
+Still, we haven't gotten to this tech yet.
+
+
+We have problems: internal fragmentation. Last block on avg. is going to be half full... this gives us a push pull. You've got a page table that lists every block that's free. In the old days a page size was 500 bytes. How many pages are going to be generated in 4GB memory... A LOT!
+
+So, pagetable is going to be enormous... and that comes out of memory.
+
+So, as memory has gotten bigger, so have the blocks. Typical block size now is 4K.
+
+Still, with 4GB, page table has 1,000,000 entries.
+
+Systems like microsoft it takes an act of god to find out how to doo this bc they don't want you to fool with it but you can actually change your block size. the bigger the block, the bigger the waste in the last page... i.e. the more that's lost.
+
+
+SO, that's one issue... Another issue is now I have a double jump to find anything... now instead of jumping directly to address that I need... now you have a page number and an offset
+
+The page table has the address of the actual block
+
+GOtta look for frame that holds actual information by using page table... everything is a double jump
+
+NOW:
+
+They've literally created special memory... registers in the CPU. In order to speed up the double jump stuff, they put part of the page table in registers in the cpu... this sounds like we are playing a random game, that's actually not true.
+
+Remember way back where we were talking about OS services... we talked about profiler... tells you how long uou are spending in processes... so you can know which process is taking the most time... 80/20 rule is very valid here.
+
+So, if you put the frequently used ones in the registers your double jump is not as big of a problem since things can be accessed in a register and the delay is a lot less because registers are a lot faster. These are called TLBs: Translation Look-aside Buffers
+
+"If someone asks you how your raster unit is doing, you might get offended"
+
+Some people try to call TLBs associative memory....
+
+They are registers, and they are in the cpu. Old days you had 20-30 of them. Now they've gone nuts... standard TLB is 4k pages these days
+
+Microsoft: any new process is allocated 30 pages. Standard number of pages is 4k.. if you need pages, because that's not enough, first thing MS does is try to steal pages from somewhere else..
+
+
+OS has two stashes of pages.. OS ones that nobody else can have. And it has a stash of user pages...
+
+MS tries to take from user page stash with goal of not effecting another process
+
+MS also does things like break a page in half if the internal fragmentation is smaller than half of the page: called a buddy block that can be added on to something else
+
+The overhead of keeping track of these halves is kinda crazy. If we had HUGE blocks, this might make sense... but with 4k... doesn't make sense
+
+
+If you have 8GB or 4GB of memory... you should probably modify the page sizes.... ex silicon graphics has a system with 256+ internal memory... they have a 64K sized page... and even that is probably too small
+
+
+
+
+
+Looking at effective access time -> you have what you call a hit rate... you are trying to access a particular page. 
+
+
+
+
+"...you all will become software engineers... well, if I pass you, and that's not a given. But, I do like dark rum and tonics, I'm bribable"
+
+
+
+-- Next attempt
+
+If a routine is never called, it's never loaded... the problem is still fragmentation. We have a segment table, but the segments are not all the same size... you still run into the FF, BF, WF stuff
+
+Contiguous stuff is gone at least....
+
+
+-- Next attemp Paged Segmentation -> way too complicated, and so it was abandoned.
+
+-- FINALLY
+
+Virtual Memory
+
+We only load the pages that we need
+
+
+
+New problem: How much do I load initally? May end up with page faults... which results in overhead caused by going to find the page you need but you don't have. This page is out on the disk...
+
+
+What is a page fault? It's an I/O blocking call just like you calling for data... because I have to go to disk to get this data.
+
+I have enough of these in my program... and just like the program, it does the same thing where it swaps you out and you go on the block list
+
+Initially you will start with a lot of page faults
+
+Brings up the concept of working set: how many blocks of memory do I need in order to lessen page faults?
+
+At some stage you want to get to a steady state where page faults happen infrequently.
+
+If my working set is too small I'm going to be page faulting all the time: called thrashing.
+
+This is where MS will go get you more blocks
+
+There is a page replacement policy on which page to replace... no look-ahead capability available.
+
+Almost all modern environments are data driven... you don't know what data's coming in to churn your process
+
+SO, there's FIFO or there's least recently used... keep track of the pagees in memory and the one I have used for a long time: bang, we replace
+
+[Professor says "it" like "eeit"]
+
+
+Now, if you're out in town and you're running the same software... you can figure out the working set over time and rearrange it to your needs.
+
+Otherwise, it's full overhead.
+
+Getting swapped out... full context switch... just like IO.
+
+What if it's a data page I'm overwriting --> two IO calls. Copy old out... copy new one in.
+
+To avoid that we have a little hardware help called a dirty bit. If page in memory has been modified, the dirty bit is set and I might choose a different one to swap.
+
+"Self modifying code is a horrible way to do business... if reliability is an issue because there's no way to test it"
+
+
+In modern env. cache on CPU chip (two kinds: data cache and instruction cache; physically they are the same but they're designated for different purposes).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
