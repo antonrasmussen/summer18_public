@@ -1,0 +1,11 @@
+C:/Users/antonrasmussen/Desktop/glew_build/CMakeFiles/glewinfo.dir
+C:/Users/antonrasmussen/Desktop/glew_build/CMakeFiles/glew.dir
+C:/Users/antonrasmussen/Desktop/glew_build/CMakeFiles/glew_s.dir
+C:/Users/antonrasmussen/Desktop/glew_build/CMakeFiles/uninstall.dir
+C:/Users/antonrasmussen/Desktop/glew_build/CMakeFiles/visualinfo.dir
+C:/Users/antonrasmussen/Desktop/glew_build/CMakeFiles/install/local.dir
+C:/Users/antonrasmussen/Desktop/glew_build/CMakeFiles/install.dir
+C:/Users/antonrasmussen/Desktop/glew_build/CMakeFiles/edit_cache.dir
+C:/Users/antonrasmussen/Desktop/glew_build/CMakeFiles/rebuild_cache.dir
+C:/Users/antonrasmussen/Desktop/glew_build/CMakeFiles/list_install_components.dir
+C:/Users/antonrasmussen/Desktop/glew_build/CMakeFiles/install/strip.dir

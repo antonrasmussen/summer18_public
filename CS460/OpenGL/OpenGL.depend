@@ -1,0 +1,58 @@
+# depslib dependency file v1.0
+1527206138 source:c:\users\antonrasmussen\google drive\school stuff\cs\odu_cs_summer_2018\cs460\gluttest\main.c
+	<stdio.h>
+	<stdlib.h>
+	<GL/glew.h>
+	<GL/freeglut.h>
+
+1527208707 source:c:\users\antonrasmussen\google drive\school stuff\cs\odu_cs_summer_2018\cs460\gluttest\ppm.c
+	<windows.h>
+	<stdio.h>
+	<stdlib.h>
+	<GL/Gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+
+1527209837 source:c:\users\antonrasmussen\google drive\school stuff\cs\odu_cs_summer_2018\cs460\gluttest\draw_points.c
+	<windows.h>
+	<GL/glu.h>
+	<GL/Gl.h>
+	<GL/glut.h>
+	<GL/glext.h>
+
+1527296098 source:c:\users\antonrasmussen\google drive\school stuff\cs\odu_cs_summer_2018\cs460\opengl\nehe1.cpp
+	<windows.h>
+	<gl\gl.h>
+	<gl\glu.h>
+
+1527296911 source:c:\users\antonrasmussen\google drive\school stuff\cs\odu_cs_summer_2018\cs460\opengl\nehe5.cpp
+	<windows.h>
+	<gl\gl.h>
+	<gl\glu.h>
+
+1527297147 source:c:\users\antonrasmussen\google drive\school stuff\cs\odu_cs_summer_2018\cs460\opengl\bouncingballs.cpp
+	<GLUT/glut.h>
+	<GL/glut.h>
+	<cmath>
+
+1527297209 source:c:\users\antonrasmussen\google drive\school stuff\cs\odu_cs_summer_2018\cs460\opengl\robotarm.cpp
+	<GLUT/glut.h>
+	<GL/glut.h>
+
+1527300756 source:c:\users\antonrasmussen\google drive\school stuff\cs\odu_cs_summer_2018\cs460\opengl\battlejake.cpp
+	"battleJake.hpp"
+	<sstream>
+	<string>
+
+1527300675 c:\users\antonrasmussen\google drive\school stuff\cs\odu_cs_summer_2018\cs460\opengl\battlejake.hpp
+	<stdio.h>
+	<map>
+	<list>
+	<vector>
+	<string>
+	<fstream>
+	<iostream>
+
+1527470972 source:c:\users\antonrasmussen\google drive\school stuff\cs\odu_cs_summer_2018\cs460\opengl\primer1.cpp
+	<GL/glut.h>
+
