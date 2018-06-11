@@ -1,0 +1,145 @@
+
+
+From Wikipedia (https://en.wikipedia.org/wiki/Longest_common_subsequence_problem):
+
+
+The longest common subsequence (LCS) problem is the problem of finding the longest subsequence common to all sequences in a set of sequences (often just two sequences). 
+
+It differs from the longest common substring problem: unlike substrings, *subsequences are not required to occupy consecutive positions within the original sequences*. 
+
+The longest common subsequence problem is a classic computer science problem, the basis of data comparison programs such as the diff utility, and has applications in bioinformatics. It is also widely used by revision control systems such as Git for reconciling multiple changes made to a revision-controlled collection of files.
+
+
+#########################################################################################################################
+Remember! (From 361)
+
+The `greatest substring algorithm` is a used in a number of varying applications including visual recognition and molecular biology. 
+
+Basically a string of values is processed and the LONGEST sequential substring that has the greatest subtotal is computed.
+
+For example: if V[3, -5, 2, 4, 2, -1, 5, -8 0 2] then the greatest substring is [2, 4, 3, -1, 5] with a total of 13. 
+	 -> Accept from the keyboard a number N of random values [-20:20]
+	 -> Load them into the list V (and display the contents). 
+
+
+
+	 -> Process the list.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+What does it mean to be the greatest substring?
+
+
+Partial sums of the sequence by index
+pSUM(V[0]) = V[0];
+pSUM(V[1]) = V[0] + V[1];
+pSUM(V[2]) = V[0] + V[1] + V[2];
+.
+.
+.
+pSUM(V[n]) = V[0] + ... + V[n] ;
+
+
+substr(pSUM(0), pSUM(n)) = V
+
+
+subStr(pSUM(1) - pSUM(0)) = V[1]
+subStr(pSUM(2) - pSUM(0)) = V[1] + V[2]
+
+
+
+Given n = 0
+	-> numOfSubStr = 1 -> 0
+
+Given n = 1
+	-> numOfSubStr = 1 -> V[0]
+
+Given n = 2
+	-> numOfSubStr = 3 -> V[0], V[1], V[(0,1)]
+
+Given n = 3
+	-> numOfSubStr = 7  -> V[0], V[1], V[2], V[(0,1)], V[(0,2)], V[(1,2)], V[(0,1,2)]
+
+Given n = 4
+	-> numOfSubStr = 13 -> V[0], V[1], V[2], v[3], 
+			
+			      V[(0,1)], V[(0,2)], V[0,3], V[(1,2)], V[(1,3)], V[(2,3)], 
+			
+			      V[(0,1,2)], V[0,1,3],
+
+			      V[(0,1,2,3)]
+
+
+Given n
+
+	-> numOfSubStr = n^2 - n + 1 
+
+
+So now we know how many possible substrings there can be in any one string of values
+
+We just need to compare the sums of each substring to determine which one has the greatest value.
+
+
+E.G. if V[3, -5, 2, 4, 2, -1, 5, -8 0 2] 
+
+          ^   ^  ^  ^  ^   ^  ^   ^ ^ ^
+Given n = 10
+
+We know the numOfSubStr = 91
+
+-> We need to determine the sum of each of the 91 substrings and find the largest
+
+So, thinking data structures.... where do we put the 91 substrings?
+
+
+if(n > 0)
+{
+  V[0], ..., V[n-1] ;
+  if(n > 1)
+  {
+     V[(0,1), ..., (0,n-1), (1, n-1), ..., (n-2, n-1)];
+     
+     if(n > 2)
+     {  . . . 
+
+
+STOPPED HERE!
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	 -> Load the solution into a separate data structure of your choice (and display the contents). 
+
+#########################################################################################################################
+
+From Wikipedia (https://en.wikipedia.org/wiki/Diff_utility):
+
+The operation of diff is based on solving the longest common subsequence problem.
+
+In this problem, given two sequences of items:
+
+       a b c d f g h j q z
+       a b c d e f g i j k r x y z
+
+and we want to find a longest sequence of items that is present in both original sequences in the same order. That is, we want to find a new sequence which can be obtained from the first original sequence by deleting some items, and from the second original sequence by deleting other items. We also want this sequence to be as long as possible. In this case it is
+
+       a b c d f g  j  z
+
+From a longest common subsequence it is only a small step to get diff-like output: if an item is absent in the subsequence but present in the first original sequence, it must have been deleted (as indicated by the '-' marks, below). If it is absent in the subsequence but present in the second original sequence, it must have been inserted (as indicated by the '+' marks).
+
+       e   h i   q   k r x y
+       +   - +   -   + + + +
+
+
+
+EXTRA READS!
+
+An O(ND) Difference Algorithm and Its Variations: http://www.xmailserver.org/diff2.pdf
+
+
+LOOK UP!
+
+Approximate String Matching
+Algorithms for Finding Nearest Common Ancestors
+
