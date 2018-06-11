@@ -1,0 +1,7 @@
+After creating your public key, the key should be stored as "(whatever folder you started in)/.ssh/id_rsa.pub"
+
+So use this command:
+cat ~/.ssh/id_rsa.pub | ssh user@123.45.67.89 "cat >> ~/.ssh/authorized_keys" where user is your username (sometimes "root", or whatever you may have set up), and replace 123.45.67.89 with your machine / host / VPS's IP address.
+
+If the directory .ssh is not yet created on the host machine, use this small variation:
+cat ~/.ssh/id_rsa.pub | ssh user@123.45.56.78 "mkdir ~/.ssh; cat >> ~/.ssh/authorized_keys"

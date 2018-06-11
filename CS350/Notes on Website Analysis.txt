@@ -1,0 +1,96 @@
+The WebsiteAnalysis system must be cable of classifying the links contained in a local copy of a website.
+
+WebsiteAnalysis must be capable of processing sites containing between 1 and 1000 pages. After identifying a set of HTML files, an error message must be output if fewer than 1 page or more than 1000 pages are present.
+
+
+Images => <img>
+
+Javascript => <style>"*.js "</style>
+
+CSS => <style>"*.css "</style>
+
+Hyperlinks => <"a * href=" . . ." *></a>
+
+Datafiles
+
+ archives
+ video
+ audio
+ other
+
+
+--
+
+The complete description of the functions to be performed by the software
+
+--
+
+Basic Issues the SRS shall address:
+
+a) Functionality: What is the software supposed to do
+b) External Interfaces: How does the software interact with people, the system's hardware, other hardware, and other software?
+[STRIKE] c) Performance: What is the speed, availability, response time, recovery time of various software functions.
+d) Attributes: What are the portability, correctness, maintainability, security, etc. considerations?
+e) Design constraints imposed on an implementation: Are there any required standards in effect, implementation language, policies for database integrity, resource limits, operating environment(s) etc.?
+
+AVOID PLACING DESIGN OR PROJECT REQUIREMENTS IN SRS!!!
+
+Is this all the functionality of the project or will it be part of a larger system?
+
+SRS:
+
+- SHOULD correctly define ALL of the software requirements. The software requirement may exist b/c task to be solved OR special characteristic of project
+
+- SHOULD NOT descrive any design or implementation details. (THIS HAPPENS IN THE DESIGN STAGE OF THE PROJECT)
+
+- SHOULD NOT impose additonal constraints on the software -- (you may limit RANGE of valid designs, do not specific a particular design)
+
+
+---
+
+A Complete SRS:
+
+- Includes all significant requirements:
+
+a)
+ - Functionality
+ - Performance
+ - Design Constraints
+ - Attributes
+ - External Interfaces
+ - External requirements imposed by spc should be acknowledged and treated
+
+b) Definition of the responses of the software to all realizable classes of input data in all realizeable classes of situations. Specify responses to both valid and invalid input!
+
+c) Full labels and references to all figures, tables, and diagrams in the SRS and definition of all terms and units of measure.
+
+
+Anton's Opinion: I think we should use Degree of Necessity to rank requirements ("Essential" "Conditional" and "Optional")
+
+FORMAT (Also helps make SRS modifiable)
+
+- Have a coherent and easy-to-use organization with table of contents, an index, and explict cross-referencing
+- Not be redundant (i.e. the same requirement should not appear in more than one place in the SRS)
+- Express each requirements separately, rather than intermixed with other requirements
+
+
+ANTON RECOMMENDATION: We should prepare our vision of the SRS for "joint" review with Professor Kennedy at least one time before we submit. We can think of Prof. Kennedy as our customer/supplier. (Ideally with a prototype)
+
+NOTE: Requirements should be specificed as completely and thoroughly as is known at the time
+
+
+Embedding Design:
+
+The SRS should specify what functions are to be performed on what data to produce what results at what location for whom.
+
+Don't worry about covering modules/module details, inheritance/module relationship, data structures
+
+* Requirements should be stated from a purely external viewpoint.
+
+** The SRS should adress the software product, not the process of producing the software product.
+
+THE PARTS OF AN SRS:
+
+
+
+
