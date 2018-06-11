@@ -1,0 +1,7 @@
+Voiced consonants:
+
+ /b/, /d/, /g/, /ð/, /z/, /?/, /?/, /m/, /n/, /?/, /l/, /r/, /w/, /j/, /?/ (flap)
+
+Voiceless consonants:
+
+/p/, /t/, /k/, /?/, /?/, /f/, /s/, / ? /, /h/, / ?/, /?/
