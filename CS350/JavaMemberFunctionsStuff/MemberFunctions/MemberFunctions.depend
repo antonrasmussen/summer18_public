@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1491926836 source:c:\users\antonrasmussen\google drive\school stuff\cs\333\333 solutions\06 member functions\gpacalc.cpp
+	<fstream>
+	<iostream>
+	<iomanip>
+	<string>
+	"student.h"
+	"gradeValue.h"
+
+1491926836 c:\users\antonrasmussen\google drive\school stuff\cs\333\333 solutions\06 member functions\student.h
+	<string>
+
+1491926836 c:\users\antonrasmussen\google drive\school stuff\cs\333\333 solutions\06 member functions\gradevalue.h
+	<string>
+
+1491926836 source:c:\users\antonrasmussen\google drive\school stuff\cs\333\333 solutions\06 member functions\gradevalue.cpp
+	"gradeValue.h"
+
+1491926836 source:c:\users\antonrasmussen\google drive\school stuff\cs\333\333 solutions\06 member functions\student.cpp
+	"student.h"
+	"gradeValue.h"
+

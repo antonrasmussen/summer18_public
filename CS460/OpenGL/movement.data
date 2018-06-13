@@ -1,46 +1,3 @@
-<html>
-<pre>
-                   CS 460/560 Little Bighorn Project Data
-
-data is in the form of a two dim matrix with rows indexed by units
-and columns by time. contrary to previous statements, 1:30pm is the
-first time and 6:40pm is the last time so there are 32 columns. the
-row order is as follows:
-
-* (Custer's headquarters unit)
-F
-C
-E
-I
-L
-A (A, M & G are Reno's command)
-M
-G
-H (H, D & K are Benteen's command)
-D
-K
-B (packtrain guard)
-packtrain (blank cavalry unit)
-C (Crazy Horse,  Oglala warchief)
-G (Gall, Hunkpapa warchief)
-34 blank indian units
-
-
-entries take the form of ....;x,y;;..... where x and y are the pixel
-location of the CENTER of the unit. two ; together represent a null
-entry meaning the unit does not move during that interval. a # means
-that that particular cavalry unit will appear on the map for the first
-time during the next interval. a $ means that a cavalry unit disappears
-(all dead). only cavalry appear and disappear; the indians are all
-present at the beginning and at the end. although Gall and Crazy Horse
-are listed first, it might be a good idea to draw them last since indian
-units overlap on numerous occasions and G and C are the only indian units
-that have id's on them.
-
-
-
-
-DATA:
 #;755,90;805,180;;790,180;760,250;710,300;660,350;615,405;515,405;410,485;375,585;390,655;330,645;215,660;100,755;;;;;;$
 #;755,75;795,170;;;770,240;720,290;670,340;625,400;525,400;415,475;375,575;385,650;345,640;225,650;120,740;105,760;;;;;$
 #;760,60;785,160;;;780,230;730,280;680,330;635,390;540,400;415,460;380,565;380,640;360,635;235,640;140,725;135,770;;;;$
@@ -91,6 +48,3 @@ DATA:
 375,760;;;;;;;;;;340,740;;;;320,710;135,825;80,795;;;;165,765;;;190,680;;;;;;;;;
 365,745;;;;;;;;;;360,750;375,730;;315,710;315,685;175,800;150,835;150,810;;;175,780;;;;;;;;;;;;
 385,745;;;;;;;;;;380,750;365,730;;330,700;335,680;150,805;125,825;120,805;;;180,790;190,780;;;;;;;;;;;
-</pre>
-</html>
-

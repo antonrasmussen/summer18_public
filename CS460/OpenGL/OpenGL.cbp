@@ -39,7 +39,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="primer1.cpp" />
+		<Unit filename="CS460FinalProject.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
