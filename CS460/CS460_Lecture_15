@@ -1,0 +1,156 @@
+Lighting and shading is a bitch, many short cuts
+
+
+Heart and soul: general illumination eqn
+
+Remember there's no such thing as an area light source... only point light soures
+
+Our classroom would have >3000 point light sources
+
+gen ill eqn takes care of these lights
+
+Direct lighting -- direct impact from lighting
+
+Lots of reflections.... could follow a light beam around infinitely
+
+--this is extremely hard to model
+
+way too busy to model reflections... don't model
+
+gen ill eqn term for point light source + direct reflection off of mirros, shiny sources (treated like point light source)...
+
+but, inter-reflection between objects (gets into colors)... hard to model but in gen ill eqn you have a term called ambient light which is a simulation of this stuff... if you turn off all point light sources, ambient light remains because it's artifical... it's not actually a reflection ... the objects themselves glow. It's a short form of radiocity... involved in def color models... from engineering
+
+Engineering have models for, say, heat radition... so, why not use that for light? Turned out to be harder than the other way... nobody uses illumination model from engineering... results aren't any better than gen illum eqn.
+
+But, we did blend some of this radition stuff by using ambient light to simulate inter-reflection light with glowing objects
+
+
+Gen ill eqn = Intensity = IntensityOfAmbientLight + (IntensityOfPointLightSource1 . . . IntensityOfPointLightSourceN)
+
+Assume point light source...
+
+First seen in movies: Space Movies . . .  single light source, so gen illum eqn source
+
+
+Modifying coefficients are assigned to each.... (0,1): Material Property (kd) --> movies have a bunch of these on hand... other material property example: specular reflection
+
+Point light source has some issues (not affecting ambient light):
+
+- how far away is it . . . look at figure of merit (from acoustics) to measure intensity
+
+Diverge: sound underwater is affected by water salinity.... so, near shore with rivers coming into ocean is different from out in ocean
+
+
+Submarine acoustics - You end up with an acoustic hole where subs can go and avoid sound
+
+Modern subs can be heard 30 miles away... but if a sub knows where its hole is, it can get as close as 1 mi without being detected
+
+Modern torpedos can shoot from 20 miles, at 60 knotts... and they are target seeking
+
+
+fatt is a factor of attenuation in gen ill eqn
+
+all rays from a particular point light source are parallel.... a hold over from the days of all polygons
+
+
+When making a movie they estimate and iterate...
+
+
+This doesn't take into account color.... different light colors, colors of the surface --> diffuse color coefficient
+
+
+Red light source shining on all green ball will reflect black
+
+
+Polygon mesh: want to shade it as if it's a smooth surface
+
+2 methods:
+
+-Giraud shading - interpolated shading
+-Phong shading - specular reflection model . . .  does not interpolate intensities, it interpolates surface normals
+
+Most modern method combines visible surface det and lighting
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -40,18 +40,18 @@ void display(void)
 	glClear ( GL_COLOR_BUFFER_BIT );
 	glRasterPos2i(0,0);
 	glDrawPixels(n,m,GL_RGB, GL_UNSIGNED_INT, image);
-      glFlush ( );
+      	glFlush ( );
 
 }
 
 void myreshape(int h, int w)
 {
-	glMatrixMode (GL_PROJECTION);
-	glLoadIdentity();
-	gluOrtho2D(0.0, (GLfloat) n, 0.0, (GLfloat) m);
-	glMatrixMode(GL_MODELVIEW);
-	glLoadIdentity();
-	glViewport(0,0,h,w);
+	//glMatrixMode (GL_PROJECTION);
+	//glLoadIdentity();
+	//gluOrtho2D(0.0, (GLfloat) n, 0.0, (GLfloat) m);
+	//glMatrixMode(GL_MODELVIEW);
+	//glLoadIdentity();
+	//glViewport(0,0,h,w);
 }
 
 int main(int argc, char**argv)

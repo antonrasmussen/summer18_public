@@ -1,0 +1,288 @@
+Realism
+
+See book: Playing with depth perception with colors.... blue had a reason for depth. like old technicolor films. RGB projectors.
+
+
+In modern environment there are three basic things I have to worry about:
+
+
+visible surface determ.; 
+
+lighting = shadows, shading, 
+
+etc. <- where the bulk of my calcs take place; surface detail
+
+
+
+1st we'll look at visible surface determ.
+
+Thin line algorithms... things you can't see b/c something's in front of you
+
+When they got to 3D became hidden surface... now visible surface
+
+Dealing with the pov of the viewer, what viewer can see, blocking other things
+
+1) Object percision - deals with the things that you draw
+
+2) Image percision - deals with the entity pixel by pixel
+
+We're gonna go through the techniques... not used a lot anymore. But, interestingly, oldest technique is still used
+
+
+Two issues here:
+
+-Dealing with back faces... front blocking back... that's one issue. Another issue is inter-object... some back/some front
+
+
+Old scheme - back face culling - does not deal with multiple objects/only deals with back portion of single object. Polygon based system... went out of favor.. but, for games since they are still polygons... it came back
+
+
+Here's the reason: dealing with object percision normally involves sorting, and sorting sucks... it's just painful
+
+We will use this technique in a polygon environment to get rid of... probably... half of the polygons.
+
+THis is easy
+
+THEN We will use some other kind of technique to do the rest of it....
+
+Backface culling - it uses the surface normal
+
+Create vector type arith... point of view of viewer is a vector... we always think about vec length of 1 since we don't care about this... we do a dot product... sclar prod of two vectors (vec from pov and vec from face).... gives back a number... don't care what it is... just want the sign... If + it means polygon surface normal is faced in the same direction as viewer... means it's in the back... if negative, it means that it's looking back toward the viwer... anything with pos # we just take out
+
+What we use after that can be any of the other techniques.... bf culling is simple, easy, don't have problems with it... it's an object precision technique that doesn't restrict image precision stuff... allows us to not have to worry about considering back stuff... this is the oldest technique... created way back when when drawing a single object. Had to do stuff for other poss. but remembering surfaces in the old days were only polygon meshes--didn't get a vote--when we started doing other things it fell out of favor. Could do this on a curved surface but you'd have to do it on every point on the surface which gets out of hand.
+
+This technique happens AFTER we do our transformations... b/c we are going to move, rotate, scale . . . change where they are in 3D space so they have to be in final pos. before we start doing things...
+
+If we can get rid of some of the surfaces that's less shading techniques we have to worry about.
+
+We'll therefore be doing visible surface stuff before doing shading
+
+
+That's back face culling... used universally in videogames... we have hardware that does dot product stuff very fast... we use the surface normals to make the shading smooth... cheating... but it's fine for a game... poor dumb human doesn't know what's real and what's not, by and large if they're close.
+
+
+2nd object technique: ALSO polygon based. THe general techique is called a list priority algorithm.. one of those things that doesn't tell you what it does... what it does do, however, historically significant but not something we do anymore: depth sort. Basically, I have the depth of the polygons, I sort the polygons that are left after backface culling... this technique can deal with more than one object at a time (unlike bf culling)... we sort the polygons by depth and draw them back to front... so that if something covers up something it's drawn later.
+
+two issues with this: 
+
+1) doing a sort... if it's 20 polygons no biggie... but, 20,000 polygons and we're gonna be doing this for a while. Most modern sorts are combo sorts... if you have a large number of objects do recursive quick sort... greater to one side, less than another side... etc. expensive sorting technique n log n that for large amounts of items it's very efficient up to a point.
+
+That is a combo.... if you have a bunch of things to sort, it'll use a quick sort until size 16.. but then it uses n^2 insertion sort... find where thing belongs and stick it there... more efficient than bubble and tumble sort... it's n^2 but for small numbers of items it's super efficient... so, we break things down into chunks of 16 with quick sort.. then insert sort all of the chunks
+
+
+Let's say you have an object going through another object (let's say an arrow going through a wall).... you have to break the stuff into pieces to make it two different polygons... then sort back to front. The early techniques of this thing literally recombined the polgons, moved them, broke them, etc.
+
+Too hard... so they went back to the start... the original setup... then move, break... go back to start... etc.
+
+
+"Piercing polygon issues"
+
+Search for this... break it... sort... back together... performs very well for simple stuff
+
+
+
+There was a transitional method from list priority.... they were looking for something else to play with polygons.
+
+Crossover mechnanism... between image percision and object percision... this technique was theoretical. It was never practically applied. But it was a stepping stone into pure image percision, whcih is the next technique... this is called area subdivision... it's a recursive algo.
+
+it's a cross because we're workign to get a quadrant with only one object in it... but it's image to some point bc the images are fluid
+
+the fact that it's recursive makes it easy to program, but it's not terribly efficient
+
+
+
+
+This led to the first image precision mechnanism; an image precision mech is still polygon based... called the scanline algorithm. It's an addition, if you will, to the normal polygon rendering scheme... remember how we did polygons... edge table, active edge table, scanned, had an in out scheme... etc. this was the scanline mech for drawing a single polygon
+
+Here we have a list of polygons... as we move across we check the in/out var of all poly... if all are out that's the background.. if it's piercing we go across scanline and are only looking at in out verible in places that are background... it's out... but when we hit what's piercing we are actually in... planar eq gets a depth z for whichever one and we draw the one that's closest.... checking all the polygons for everypoint, that's just woeful... so we use something called xtense hardware... there is hardware to check to see if a point is with a certain region. So, what I'll actually do is divide the screen up into sub areas... like a grid... and use xtense hardware to see if a polygon is in any of the grid regions so that when we get into a certain region we only check the polygons that are in that region, we don't have to checkc all of them... that cuts down having to check all of the polygons. Not ideal since we put most of the important stuff in middle.. does this a pixel at a time
+
+What about anti aliasing??
+
+Where I have an intersection of edges that might not be right at point... so, we need to make a decision of what polygon that pix belongs to.. no anti aliasing tech involved at all
+
+
+
+
+Now we come up w something used on every mach on face of earth... efficient.... depending on how many polygons... thing is linear... no sorting... order doesn't matter... but again no anti-aliasing
+
+
+
+
+Z buffer . . . it is the fastest technique of all of them. Very memory intensive, uses a lot of memory. It's quick
+
+Two buffers here: frame buffer (holds value) and z buffer (holds relative depth)extenze hardware
+extenze hardwareextenze hardware
+standard z buffer = 1 byte... 256 depths
+
+Relative depth... but, fancy graphics like SGI is 3 bytes... so 16,000,000 depths.. on SGI box z buffer is actually permanant... z-buffer on your machine is temp. usage of some memory.
+
+It is image precision... pixel by pixel. We don't have to use extense; don't care if it's polygon... can be used on any surface, curved or other wise...
+
+
+Literally the way it works... see notebook
+
+
+
+Only have to computer rel depth once... in windowing environment. If I move a window from back to font, I just redraw and find relative depth... the depth of windows is OS's choice... artifically set. Z depths don't mean anything accept relatively... to determine what's in front and what's behind
+
+Will preserve background img that user doesn't have access to.... you can call a func to mess with bg... but you can't mess with bg directly
+
+
+
+
+Last one: what we use for movies... used for a number of things besides visb surf det
+
+
+Also can use for shading and shadows
+
+
+
+Technique is called Ray Tracing
+
+
+that said, the title has changed... now a combo mech that does vis surface while at same time deals with lighting and shading... called recursive ray tracing...
+
+
+pure thing we'll talk about is ray casting--if all you're using it for is visb surf det it's ray casting.
+
+
+It's a non-real time compute intensive technique... there's no way to do this in real time, no matter how many processors we've got. 
+
+
+
+I would not use this for anything other than special effects
+
+
+
+I am going to compute the intersection of each ray from the pov of the viwer through the center of pixel and see if that line intersects any of objects, and compute the intersect... fo that pixel... we determin how many objects it goes to... then we draw a pixel
+
+
+Spheres are easy to draw... computing intersections of lines and spheres is trivial... some arbitrary surface is not so easy... sphere demos look real fast
+
+For lighting, we literally have to do it from the point of view of every light source we've got... used to compute shadows.. if I can see surface but light source can't, it's a shawdow
+
+
+Lighting and shading are the same thing
+
+
+It'll deal with any surface, curved or otherwise... and it can handle anti-aliasing (at an extreme cost)!
+
+
+How to make it better.... vol sub division... w/ little mini view vols... other thing is doing these in parallel. Rays can be done independtly
+
+Silicon graphics box has 320 parallel processors could do 320 at a time... for big Nvidia box can do 2000 in parallel... still not good enough for real time.
+
+It's used in video games for visible surface but not for shading b/c we have other techniques for shading
+
+
+Visibile surf det is done first... then from every poss light source we draw rays... 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
