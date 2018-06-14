@@ -1,0 +1,78 @@
+Schedule:
+
+Monday, demonstrate Project 1 Program and Review for Midterm . . . midterm is Wed... a week from today. 2hrs to do midterm . . . 9 questions.  4 * 15 point questions, 4 * 10 point questions...
+
+I/O Systems ... io subsystems are pretty standardized... with attempts to standardize all devices so connections between devices in systems is simple, easy, not a whole lot of issues...
+
+
+There's an incredible variety of io devices but they have tried to standardize the interfacces... some OSs like Unix treat devices like files... open, read, write, close... just like a file
+
+In a Unix env you can issue an open command ... devices same way open tty... write to tty... and stuff goes to screen.... interface layer is same
+
+Common concepts: port, bus, controller....
+
+ports: in this case we're talking about physical/hw ports... when we get to data comm we talk about sw ports and they are diff.... processes have comm ports... but, here we're talking about ports plugging in physically to a piece of hardware. It's a shame they use the same term for the software ports... in data comm msgs you use a port number.. it's basically an access to buffering of some process on some machine
+a
+IN the real old days when you did reading and writing you actually had to worry about port names... but OS now does that... you may issue an IO but it goes to mainmem and does its stuff there
+
+Systems used to be polled... modern systems are interrupt driven
+
+Application programs do not allow you to turn off interrupts... but the OS allows you to do this... think about semaphores... atomic vars... to turn off interrupts
+
+
+--
+
+Low-level File Operations
+
+Every process that is opened gets assigned three processes listed in an array/table of what are called file descriptors... basically an index into that array
+
+stdin, stdout, stderr . . .  each mapped to a different output place
+
+stderr - prompt cmd, but output dumped to file
+
+
+
+
+fd = open("myfile", perams)
+
+fd = creat(" ")
+
+num = read(fd, numOfBytes, loc)
+
+write(fd, numOfBytes, loc)
+
+close(fd)
+
+
+
+redirection:
+
+open "hisfile"
+close(2)
+dup(3)
+close(3)
+
+
+There is a command for direct access to a file--an expensive operation--
+
+
+pos= lseek(fd, start, offset) . ..  doesn't read or write... it positions the internal file pointer.
+
+
+ex 
+
+pos = lseek(fd, 0, 3*sizeof int)
+
+read(fd, sizeof int, x)
+
+lseek(fd, 1, -4)
+
+x = func(x)
+
+write(fd, x, sizeof int)
+close(fd)
+
+
+
+
+Questions: numerics and short answer

@@ -1,0 +1,51 @@
+Shadows . . . easy, med, hard way...
+
+How easy is it is the game..
+
+
+Easy way: draw shadown on ground or whatever it is ...  technique from cartoon in the old days... 
+
+Second tech - double z buffer... remember ... for vis surf det... fastest is z buff
+
+so we do one z buff for vis surf and one z buff form light... if light can't see but viewer can, it's a shadow
+
+Last method: done way shadows are really made
+
+Recursive ray tracing... add or don't add terms to general lumination eqn
+
+Draw back to this is that it's not fast.
+
+There is some double z buffering in video games... there is *some* ray tracing that happens in video games, but there's normally a lot fewer light sources in video games... esp in daylight as there's only one light source
+
+
+Surface Detail
+
+3 mechanism
+
+- Texture map - img of surface detail.... a picture of bricks or whatever pasted onto the surface... there's gonna be some distortion (think about world maps)
+
+Same issues with texture mapping... if curved sources, you can get some distortion. But, if you do it properly you can mitigate that effect. You're never gonna shake it completely... but you can mitigate... you map corners of pixels to place on surface... texels... the image is flat and you've got square pixels... and a curved surface... there is hardware that can do this.... but, they have octree versions of the text map itself... sev. size text maps that adjusts with expansion of object size
+
+- Bump Map
+
+e.g. moon surface with crater. Where do the craters come from? Some foreign body... craters are a splash
+
+Not a map of textures, but a map of changes in the surface normals
+
+We change the surface normals on the surface such that the mountains and craters appear.... as you move, different views cause these surface normals to adjust
+
+
+We don't change the surface... we just change surface normals... note that this causes horizon on moon to look smooth... b/c there is no actual craters or mountains on the moon
+
+
+- Displacement map (not used in computer graphics) . . .used in scientific mechanism for mapping surface
+
+
+--> They've completely mapped the atlantic ocean... they're working on pacific now. Detail is such that 
+
+
+
+
+
+
+
