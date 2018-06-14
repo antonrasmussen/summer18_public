@@ -1,0 +1,65 @@
+Fractals.... and then JPEG standard
+
+fracs are math.... but in case of graphics, we don't keep going to infinity because once you get to pixel size there's no point to make it smaller.
+
+
+
+--
+
+FINAL Due at 9:30 AM on the final friday
+
+
+--
+
+
+JPEG standard
+
+The problem with images is their big if you take them straight up... 
+
+
+Compression: Two flavors (primarily done on text)
+
+-> Lossy
+
+	- DCT - Forier transforms ... Any signal can be transferred into all cosines... essentially loseless but not exactly because of not being able to represent infinity and floating point accuracy
+	- Quant - as I get to the end terms, I throw them out because they don't make a difference
+	- Diff - works fairly well if its even signals
+
+-> Lossless
+	
+	- Entropy (stats) - find a repeated word/phrase, put it in dictionary with location... dict is an array of these words/phrases
+	- RLE - Run length encoding... for repetative patterns... we track repeated colors with four byte array (3 colors, # of repeats)
+	- Color Lookup - hw based . . . accessed via an index. Statistical for colors... need hw help for this to work
+
+
+
+Forier  transforms ... first term is maybe worth a quarter or a fifth... the further you go in terms the less 
+
+
+---
+
+
+JPEG Standard : Joint Photographic Expert Group
+
+It's a lossy algorithm in total, but it's very complicated.... it sounds like it's very complicated, and that's because it is
+
+For compressing photographic images
+
+It can be overused to the point where you're losing things such that the image is no longer recognizable.... but they have it down such that complicated photos look good and everything else looks wonderful
+
+It's based on how the human sees.
+
+Three values:
+
+Luminence = 0.3R + 0.59G + 0.11B  [Brightness. How the human sees it's more important how bright something is than its color]... green is the color that makes it brighter or dimmer.
+
+Chrominence (blue) = 0.17R - 0.33G + 0.5B
+
+Chrominence (red) = 0.5R - 0.42G - 0.08.B
+
+
+
+Luminence is much more important than chrominence....
+
+
+
