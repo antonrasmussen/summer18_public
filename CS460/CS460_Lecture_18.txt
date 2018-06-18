@@ -1,0 +1,20 @@
+Look at rendering pipeline set...
+
+book has 5... radiocity is one that we won't look at because it's mainly of historical interest
+
+Graphics lends itself to piped architecture... what that means is you take primitives you do one think, you do something else, you do something else, etc... as you march through the pipe you have different boxes... etc. primitive one goes into primitive two... then both go into primitive three
+
+Graphics lends itself to this b/c of transformations, lighting, shading... more or less independent
+
+Piped parallelism
+
+Modern env: have gotten rid of piped paralleism in lieu of general purpose parallelism
+
+Z-buffer - for vis. surface determination
+
+Gouraud shading - playing with polygons; compute intensities at verticies, walk across scanline, etc.
+
+An old method: list priority and depth sort plus phong
+
+TEST is UP... Friday morning.
+
