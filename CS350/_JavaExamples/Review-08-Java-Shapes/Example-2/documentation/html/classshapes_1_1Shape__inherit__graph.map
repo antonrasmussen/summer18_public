@@ -1,0 +1,7 @@
+<map id="shapes.Shape" name="shapes.Shape">
+<area shape="rect" id="node3" href="$classshapes_1_1Circle.html" title="shapes.Circle" alt="" coords="5,155,107,181"/>
+<area shape="rect" id="node4" href="$classshapes_1_1Square.html" title="shapes.Square" alt="" coords="132,155,241,181"/>
+<area shape="rect" id="node5" href="$classshapes_1_1Triangle.html" title="shapes.Triangle" alt="" coords="265,155,380,181"/>
+<area shape="rect" id="node6" href="$classshapes_1_1EquilateralTriangle.html" title="shapes.EquilateralTriangle" alt="" coords="143,229,317,256"/>
+<area shape="rect" id="node7" href="$classshapes_1_1RightTriangle.html" title="shapes.RightTriangle" alt="" coords="342,229,487,256"/>
+</map>

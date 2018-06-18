@@ -1,0 +1,5 @@
+<map id="shapes.Triangle" name="shapes.Triangle">
+<area shape="rect" id="node4" href="$classshapes_1_1EquilateralTriangle.html" title="shapes.EquilateralTriangle" alt="" coords="5,229,179,256"/>
+<area shape="rect" id="node5" href="$classshapes_1_1RightTriangle.html" title="shapes.RightTriangle" alt="" coords="203,229,348,256"/>
+<area shape="rect" id="node2" href="$classshapes_1_1Shape.html" title="shapes.Shape" alt="" coords="131,80,236,107"/>
+</map>

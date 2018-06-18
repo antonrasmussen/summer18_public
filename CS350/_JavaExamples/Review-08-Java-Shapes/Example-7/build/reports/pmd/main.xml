@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="5.6.1" timestamp="2018-03-27T18:29:20.162">
+<file name="/home/tkennedy/Courses/Reviews/cs330/s18/Review-08-Java-Shapes/Example-7/src/main/java/edu/odu/cs/cs330/examples/RunShapes.java">
+<violation beginline="59" endline="95" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Comments" package="edu.odu.cs.cs330.examples" class="RunShapes" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/comments.html#CommentSize" priority="3">
+Comment is too large: Too many lines
+</violation>
+<violation beginline="141" endline="141" begincolumn="25" endcolumn="65" rule="UnusedPrivateMethod" ruleset="Unused Code" package="edu.odu.cs.cs330.examples" class="RunShapes" method="addShape" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/unusedcode.html#UnusedPrivateMethod" priority="3">
+Avoid unused private methods such as 'addShape(List,Shape)'.
+</violation>
+<violation beginline="171" endline="171" begincolumn="19" endcolumn="19" rule="ShortVariable" ruleset="Naming" package="edu.odu.cs.cs330.examples" class="RunShapes" method="readShapes" variable="s" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like s
+</violation>
+<violation beginline="206" endline="206" begincolumn="25" endcolumn="26" rule="ShortVariable" ruleset="Naming" package="edu.odu.cs.cs330.examples" class="RunShapes" method="printShapeNames" variable="it" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like it
+</violation>
+<violation beginline="210" endline="210" begincolumn="19" endcolumn="19" rule="ShortVariable" ruleset="Naming" package="edu.odu.cs.cs330.examples" class="RunShapes" method="printShapeNames" variable="s" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like s
+</violation>
+<violation beginline="222" endline="222" begincolumn="25" endcolumn="26" rule="ShortVariable" ruleset="Naming" package="edu.odu.cs.cs330.examples" class="RunShapes" method="findLargestShapeByArea" variable="it" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like it
+</violation>
+<violation beginline="231" endline="231" begincolumn="19" endcolumn="19" rule="ShortVariable" ruleset="Naming" package="edu.odu.cs.cs330.examples" class="RunShapes" method="findLargestShapeByArea" variable="s" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like s
+</violation>
+</file>
+<file name="/home/tkennedy/Courses/Reviews/cs330/s18/Review-08-Java-Shapes/Example-7/src/main/java/edu/odu/cs/cs330/examples/shapes/Circle.java">
+<violation beginline="17" endline="17" begincolumn="33" endcolumn="34" rule="ShortVariable" ruleset="Naming" package="edu.odu.cs.cs330.examples.shapes" class="Circle" variable="PI" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like PI
+</violation>
+<violation beginline="27" endline="27" begincolumn="20" endcolumn="26" rule="VariableNamingConventions" ruleset="Naming" package="edu.odu.cs.cs330.examples.shapes" class="Circle" variable="_radius" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), '_radius' is not final.
+</violation>
+<violation beginline="43" endline="43" begincolumn="27" endcolumn="27" rule="ShortVariable" ruleset="Naming" package="edu.odu.cs.cs330.examples.shapes" class="Circle" method="Circle" variable="r" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like r
+</violation>
+<violation beginline="73" endline="73" begincolumn="32" endcolumn="32" rule="ShortVariable" ruleset="Naming" package="edu.odu.cs.cs330.examples.shapes" class="Circle" method="radius" variable="r" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like r
+</violation>
+<violation beginline="110" endline="110" begincolumn="19" endcolumn="25" rule="ProperCloneImplementation" ruleset="Clone Implementation" package="edu.odu.cs.cs330.examples.shapes" class="Circle" method="clone" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/clone.html#ProperCloneImplementation" priority="2">
+Object clone() should be implemented with super.clone()
+</violation>
+<violation beginline="110" endline="113" begincolumn="12" endcolumn="5" rule="CloneMethodReturnTypeMustMatchClassName" ruleset="Clone Implementation" package="edu.odu.cs.cs330.examples.shapes" class="Circle" method="clone" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/clone.html#CloneMethodReturnTypeMustMatchClassName" priority="3">
+The return type of the clone() method must be the class name when implements Cloneable
+</violation>
+<violation beginline="136" endline="136" begincolumn="39" endcolumn="45" rule="AvoidDuplicateLiterals" ruleset="String and StringBuffer" package="edu.odu.cs.cs330.examples.shapes" class="Circle" method="toString" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/strings.html#AvoidDuplicateLiterals" priority="3">
+The String literal &quot;.4f\n&quot; appears 4 times in this file; the first occurrence is on line 136
+</violation>
+</file>
+<file name="/home/tkennedy/Courses/Reviews/cs330/s18/Review-08-Java-Shapes/Example-7/src/main/java/edu/odu/cs/cs330/examples/shapes/EquilateralTriangle.java">
+<violation beginline="82" endline="82" begincolumn="30" endcolumn="30" rule="ShortVariable" ruleset="Naming" package="edu.odu.cs.cs330.examples.shapes" class="EquilateralTriangle" method="side" variable="s" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like s
+</violation>
+<violation beginline="103" endline="103" begincolumn="19" endcolumn="25" rule="ProperCloneImplementation" ruleset="Clone Implementation" package="edu.odu.cs.cs330.examples.shapes" class="EquilateralTriangle" method="clone" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/clone.html#ProperCloneImplementation" priority="2">
+Object clone() should be implemented with super.clone()
+</violation>
+<violation beginline="103" endline="106" begincolumn="12" endcolumn="5" rule="CloneMethodReturnTypeMustMatchClassName" ruleset="Clone Implementation" package="edu.odu.cs.cs330.examples.shapes" class="EquilateralTriangle" method="clone" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/clone.html#CloneMethodReturnTypeMustMatchClassName" priority="3">
+The return type of the clone() method must be the class name when implements Cloneable
+</violation>
+<violation beginline="127" endline="127" begincolumn="39" endcolumn="45" rule="AvoidDuplicateLiterals" ruleset="String and StringBuffer" package="edu.odu.cs.cs330.examples.shapes" class="EquilateralTriangle" method="toString" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/strings.html#AvoidDuplicateLiterals" priority="3">
+The String literal &quot;.4f\n&quot; appears 4 times in this file; the first occurrence is on line 127
+</violation>
+</file>
+<file name="/home/tkennedy/Courses/Reviews/cs330/s18/Review-08-Java-Shapes/Example-7/src/main/java/edu/odu/cs/cs330/examples/shapes/RightTriangle.java">
+<violation beginline="19" endline="27" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Comments" package="edu.odu.cs.cs330.examples.shapes" class="RightTriangle" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/comments.html#CommentSize" priority="3">
+Comment is too large: Too many lines
+</violation>
+<violation beginline="30" endline="30" begincolumn="28" endcolumn="38" rule="UselessParentheses" ruleset="Unnecessary" package="edu.odu.cs.cs330.examples.shapes" class="RightTriangle" method="computeHypotenuse" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="151" endline="151" begincolumn="19" endcolumn="25" rule="ProperCloneImplementation" ruleset="Clone Implementation" package="edu.odu.cs.cs330.examples.shapes" class="RightTriangle" method="clone" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/clone.html#ProperCloneImplementation" priority="2">
+Object clone() should be implemented with super.clone()
+</violation>
+<violation beginline="151" endline="154" begincolumn="12" endcolumn="5" rule="CloneMethodReturnTypeMustMatchClassName" ruleset="Clone Implementation" package="edu.odu.cs.cs330.examples.shapes" class="RightTriangle" method="clone" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/clone.html#CloneMethodReturnTypeMustMatchClassName" priority="3">
+The return type of the clone() method must be the class name when implements Cloneable
+</violation>
+<violation beginline="178" endline="178" begincolumn="39" endcolumn="45" rule="AvoidDuplicateLiterals" ruleset="String and StringBuffer" package="edu.odu.cs.cs330.examples.shapes" class="RightTriangle" method="toString" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/strings.html#AvoidDuplicateLiterals" priority="3">
+The String literal &quot;.4f\n&quot; appears 5 times in this file; the first occurrence is on line 178
+</violation>
+</file>
+<file name="/home/tkennedy/Courses/Reviews/cs330/s18/Review-08-Java-Shapes/Example-7/src/main/java/edu/odu/cs/cs330/examples/shapes/Shape.java">
+<violation beginline="13" endline="111" begincolumn="17" endcolumn="1" rule="AbstractNaming" ruleset="Naming" package="edu.odu.cs.cs330.examples.shapes" class="Shape" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#AbstractNaming" priority="3">
+Abstract classes should be named AbstractXXX
+</violation>
+<violation beginline="15" endline="15" begincolumn="28" endcolumn="48" rule="CommentRequired" ruleset="Comments" package="edu.odu.cs.cs330.examples.shapes" class="Shape" variable="WIDTH_LABEL" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+fieldCommentRequirement Required
+</violation>
+<violation beginline="16" endline="16" begincolumn="28" endcolumn="48" rule="CommentRequired" ruleset="Comments" package="edu.odu.cs.cs330.examples.shapes" class="Shape" variable="WIDTH_VALUE" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+fieldCommentRequirement Required
+</violation>
+<violation beginline="24" endline="24" begincolumn="47" endcolumn="58" rule="VariableNamingConventions" ruleset="Naming" package="edu.odu.cs.cs330.examples.shapes" class="Shape" method="getFormat" variable="value_format" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'value_format' is not final.
+</violation>
+<violation beginline="29" endline="29" begincolumn="22" endcolumn="26" rule="VariableNamingConventions" ruleset="Naming" package="edu.odu.cs.cs330.examples.shapes" class="Shape" variable="_name" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), '_name' is not final.
+</violation>
+<violation beginline="29" endline="29" begincolumn="15" endcolumn="27" rule="CommentRequired" ruleset="Comments" package="edu.odu.cs.cs330.examples.shapes" class="Shape" variable="_name" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+fieldCommentRequirement Required
+</violation>
+<violation beginline="64" endline="64" begincolumn="33" endcolumn="37" rule="VariableNamingConventions" ruleset="Naming" package="edu.odu.cs.cs330.examples.shapes" class="Shape" method="name" variable="_name" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), '_name' is not final.
+</violation>
+<violation beginline="86" endline="86" begincolumn="21" endcolumn="69" rule="CloneMethodReturnTypeMustMatchClassName" ruleset="Clone Implementation" package="edu.odu.cs.cs330.examples.shapes" class="Shape" method="clone" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/clone.html#CloneMethodReturnTypeMustMatchClassName" priority="3">
+The return type of the clone() method must be the class name when implements Cloneable
+</violation>
+<violation beginline="102" endline="106" begincolumn="13" endcolumn="13" rule="UselessParentheses" ruleset="Unnecessary" package="edu.odu.cs.cs330.examples.shapes" class="Shape" method="toString" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+</file>
+<file name="/home/tkennedy/Courses/Reviews/cs330/s18/Review-08-Java-Shapes/Example-7/src/main/java/edu/odu/cs/cs330/examples/shapes/ShapeFactory.java">
+<violation beginline="22" endline="22" begincolumn="23" endcolumn="27" rule="VariableNamingConventions" ruleset="Naming" package="edu.odu.cs.cs330.examples.shapes" class="ShapeFactory$ShapePair" variable="_name" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), '_name' is not final.
+</violation>
+<violation beginline="27" endline="27" begincolumn="23" endcolumn="28" rule="VariableNamingConventions" ruleset="Naming" package="edu.odu.cs.cs330.examples.shapes" class="ShapeFactory$ShapePair" variable="_model" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), '_model' is not final.
+</violation>
+<violation beginline="59" endline="59" begincolumn="32" endcolumn="44" rule="VariableNamingConventions" ruleset="Naming" package="edu.odu.cs.cs330.examples.shapes" class="ShapeFactory" variable="_known_shapes" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), '_known_shapes' is not final.
+</violation>
+<violation beginline="59" endline="65" begincolumn="20" endcolumn="6" rule="CommentRequired" ruleset="Comments" package="edu.odu.cs.cs330.examples.shapes" class="ShapeFactory" variable="_known_shapes" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+fieldCommentRequirement Required
+</violation>
+<violation beginline="79" endline="79" begincolumn="18" endcolumn="27" rule="UselessParentheses" ruleset="Unnecessary" package="edu.odu.cs.cs330.examples.shapes" class="ShapeFactory" method="createShape" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="95" endline="95" begincolumn="18" endcolumn="27" rule="UselessParentheses" ruleset="Unnecessary" package="edu.odu.cs.cs330.examples.shapes" class="ShapeFactory" method="isKnown" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+</file>
+<file name="/home/tkennedy/Courses/Reviews/cs330/s18/Review-08-Java-Shapes/Example-7/src/main/java/edu/odu/cs/cs330/examples/shapes/Square.java">
+<violation beginline="17" endline="17" begincolumn="20" endcolumn="24" rule="VariableNamingConventions" ruleset="Naming" package="edu.odu.cs.cs330.examples.shapes" class="Square" variable="_side" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), '_side' is not final.
+</violation>
+<violation beginline="33" endline="33" begincolumn="27" endcolumn="27" rule="ShortVariable" ruleset="Naming" package="edu.odu.cs.cs330.examples.shapes" class="Square" method="Square" variable="s" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like s
+</violation>
+<violation beginline="63" endline="63" begincolumn="30" endcolumn="30" rule="ShortVariable" ruleset="Naming" package="edu.odu.cs.cs330.examples.shapes" class="Square" method="side" variable="s" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like s
+</violation>
+<violation beginline="92" endline="92" begincolumn="19" endcolumn="25" rule="ProperCloneImplementation" ruleset="Clone Implementation" package="edu.odu.cs.cs330.examples.shapes" class="Square" method="clone" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/clone.html#ProperCloneImplementation" priority="2">
+Object clone() should be implemented with super.clone()
+</violation>
+<violation beginline="92" endline="95" begincolumn="12" endcolumn="5" rule="CloneMethodReturnTypeMustMatchClassName" ruleset="Clone Implementation" package="edu.odu.cs.cs330.examples.shapes" class="Square" method="clone" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/clone.html#CloneMethodReturnTypeMustMatchClassName" priority="3">
+The return type of the clone() method must be the class name when implements Cloneable
+</violation>
+</file>
+<file name="/home/tkennedy/Courses/Reviews/cs330/s18/Review-08-Java-Shapes/Example-7/src/main/java/edu/odu/cs/cs330/examples/shapes/Triangle.java">
+<violation beginline="13" endline="201" begincolumn="58" endcolumn="1" rule="TooManyMethods" ruleset="Code Size" package="edu.odu.cs.cs330.examples.shapes" class="Triangle" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/codesize.html#TooManyMethods" priority="3">
+This class has too many methods, consider refactoring it.
+</violation>
+<violation beginline="18" endline="18" begincolumn="22" endcolumn="28" rule="VariableNamingConventions" ruleset="Naming" package="edu.odu.cs.cs330.examples.shapes" class="Triangle" variable="_side_a" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), '_side_a' is not final.
+</violation>
+<violation beginline="23" endline="23" begincolumn="22" endcolumn="28" rule="VariableNamingConventions" ruleset="Naming" package="edu.odu.cs.cs330.examples.shapes" class="Triangle" variable="_side_b" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), '_side_b' is not final.
+</violation>
+<violation beginline="28" endline="28" begincolumn="22" endcolumn="28" rule="VariableNamingConventions" ruleset="Naming" package="edu.odu.cs.cs330.examples.shapes" class="Triangle" variable="_side_c" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), '_side_c' is not final.
+</violation>
+<violation beginline="50" endline="50" begincolumn="29" endcolumn="35" rule="VariableNamingConventions" ruleset="Naming" package="edu.odu.cs.cs330.examples.shapes" class="Triangle" method="Triangle" variable="_side_a" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), '_side_a' is not final.
+</violation>
+<violation beginline="50" endline="50" begincolumn="45" endcolumn="51" rule="VariableNamingConventions" ruleset="Naming" package="edu.odu.cs.cs330.examples.shapes" class="Triangle" method="Triangle" variable="_side_b" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), '_side_b' is not final.
+</violation>
+<violation beginline="50" endline="50" begincolumn="61" endcolumn="67" rule="VariableNamingConventions" ruleset="Naming" package="edu.odu.cs.cs330.examples.shapes" class="Triangle" method="Triangle" variable="_side_c" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), '_side_c' is not final.
+</violation>
+<violation beginline="142" endline="142" begincolumn="16" endcolumn="16" rule="ShortVariable" ruleset="Naming" package="edu.odu.cs.cs330.examples.shapes" class="Triangle" method="area" variable="s" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like s
+</violation>
+<violation beginline="144" endline="148" begincolumn="18" endcolumn="9" rule="UselessParentheses" ruleset="Unnecessary" package="edu.odu.cs.cs330.examples.shapes" class="Triangle" method="area" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="168" endline="168" begincolumn="19" endcolumn="25" rule="ProperCloneImplementation" ruleset="Clone Implementation" package="edu.odu.cs.cs330.examples.shapes" class="Triangle" method="clone" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/clone.html#ProperCloneImplementation" priority="2">
+Object clone() should be implemented with super.clone()
+</violation>
+<violation beginline="168" endline="171" begincolumn="12" endcolumn="5" rule="CloneMethodReturnTypeMustMatchClassName" ruleset="Clone Implementation" package="edu.odu.cs.cs330.examples.shapes" class="Triangle" method="clone" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/clone.html#CloneMethodReturnTypeMustMatchClassName" priority="3">
+The return type of the clone() method must be the class name when implements Cloneable
+</violation>
+<violation beginline="194" endline="194" begincolumn="39" endcolumn="45" rule="AvoidDuplicateLiterals" ruleset="String and StringBuffer" package="edu.odu.cs.cs330.examples.shapes" class="Triangle" method="toString" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/strings.html#AvoidDuplicateLiterals" priority="3">
+The String literal &quot;.4f\n&quot; appears 5 times in this file; the first occurrence is on line 194
+</violation>
+</file>
+<file name="/home/tkennedy/Courses/Reviews/cs330/s18/Review-08-Java-Shapes/Example-7/src/main/java/edu/odu/cs/tkennedy/utilities/Utilities.java">
+<violation beginline="45" endline="45" begincolumn="33" endcolumn="41" rule="UselessParentheses" ruleset="Unnecessary" package="edu.odu.cs.tkennedy.utilities" class="Utilities" method="centeredTitle" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="47" endline="47" begincolumn="16" endcolumn="61" rule="UselessParentheses" ruleset="Unnecessary" package="edu.odu.cs.tkennedy.utilities" class="Utilities" method="centeredTitle" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="50" endline="58" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Comments" package="edu.odu.cs.tkennedy.utilities" class="Utilities" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/comments.html#CommentSize" priority="3">
+Comment is too large: Too many lines
+</violation>
+<violation beginline="81" endline="81" begincolumn="55" endcolumn="58" rule="AppendCharacterWithChar" ruleset="String and StringBuffer" package="edu.odu.cs.tkennedy.utilities" class="Utilities" method="projectHeading" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/strings.html#AppendCharacterWithChar" priority="3">
+Avoid appending characters as strings in StringBuffer.append.
+</violation>
+<violation beginline="92" endline="100" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Comments" package="edu.odu.cs.tkennedy.utilities" class="Utilities" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/comments.html#CommentSize" priority="3">
+Comment is too large: Too many lines
+</violation>
+<violation beginline="110" endline="119" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Comments" package="edu.odu.cs.tkennedy.utilities" class="Utilities" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/comments.html#CommentSize" priority="3">
+Comment is too large: Too many lines
+</violation>
+</file>
+</pmd>
