@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="5.6.1" timestamp="2018-03-27T12:39:00.549">
+<file name="/home/tkennedy/Courses/Reviews/cs330/s18/Review-08-Java-Shapes/Example-6/src/main/java/RunShapes.java">
+<violation beginline="19" endline="230" begincolumn="8" endcolumn="1" rule="NoPackage" ruleset="Naming" class="RunShapes" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#NoPackage" priority="3">
+All classes and interfaces must belong to a named package
+</violation>
+<violation beginline="20" endline="23" begincolumn="26" endcolumn="6" rule="CommentRequired" ruleset="Comments" class="RunShapes" variable="PROGRAM_HEADING" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+fieldCommentRequirement Required
+</violation>
+<violation beginline="28" endline="28" begincolumn="29" endcolumn="41" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" class="RunShapes" method="main" variable="args" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'args' is not assigned and could be declared final
+</violation>
+<violation beginline="31" endline="35" begincolumn="13" endcolumn="68" rule="DataflowAnomalyAnalysis" ruleset="Controversial" class="RunShapes" method="main" variable="shapesFile" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'shapesFile' (lines '31'-'35').
+</violation>
+<violation beginline="51" endline="87" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Comments" class="RunShapes" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/comments.html#CommentSize" priority="3">
+Comment is too large: Too many lines
+</violation>
+<violation beginline="102" endline="102" begincolumn="9" endcolumn="49" rule="LocalVariableCouldBeFinal" ruleset="Optimization" class="RunShapes" method="main" variable="scanner" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'scanner' could be declared final
+</violation>
+<violation beginline="104" endline="104" begincolumn="9" endcolumn="53" rule="LocalVariableCouldBeFinal" ruleset="Optimization" class="RunShapes" method="main" variable="shapes" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'shapes' could be declared final
+</violation>
+<violation beginline="117" endline="117" begincolumn="9" endcolumn="59" rule="LocalVariableCouldBeFinal" ruleset="Optimization" class="RunShapes" method="main" variable="largestShape" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'largestShape' could be declared final
+</violation>
+<violation beginline="131" endline="131" begincolumn="25" endcolumn="70" rule="UnusedPrivateMethod" ruleset="Unused Code" class="RunShapes" method="addShape" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/unusedcode.html#UnusedPrivateMethod" priority="3">
+Avoid unused private methods such as 'addShape(ArrayList,Shape)'.
+</violation>
+<violation beginline="131" endline="131" begincolumn="34" endcolumn="49" rule="LooseCoupling" ruleset="Type Resolution" class="RunShapes" method="addShape" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/typeresolution.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'ArrayList'; use the interface instead
+</violation>
+<violation beginline="131" endline="131" begincolumn="34" endcolumn="56" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" class="RunShapes" method="addShape" variable="shapes" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'shapes' is not assigned and could be declared final
+</violation>
+<violation beginline="131" endline="131" begincolumn="59" endcolumn="69" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" class="RunShapes" method="addShape" variable="toAdd" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'toAdd' is not assigned and could be declared final
+</violation>
+<violation beginline="134" endline="134" begincolumn="13" endcolumn="22" rule="UnnecessaryFullyQualifiedName" ruleset="Import Statements" class="RunShapes" method="addShape" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/imports.html#UnnecessaryFullyQualifiedName" priority="4">
+Unnecessary use of fully qualified name 'shapes.add' due to existing import 'shapes.*'
+</violation>
+<violation beginline="142" endline="142" begincolumn="20" endcolumn="35" rule="LooseCoupling" ruleset="Type Resolution" class="RunShapes" method="readShapes" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/typeresolution.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'ArrayList'; use the interface instead
+</violation>
+<violation beginline="142" endline="142" begincolumn="48" endcolumn="62" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" class="RunShapes" method="readShapes" variable="scanner" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'scanner' is not assigned and could be declared final
+</violation>
+<violation beginline="145" endline="145" begincolumn="9" endcolumn="60" rule="LocalVariableCouldBeFinal" ruleset="Optimization" class="RunShapes" method="readShapes" variable="collection" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'collection' could be declared final
+</violation>
+<violation beginline="148" endline="148" begincolumn="13" endcolumn="54" rule="LocalVariableCouldBeFinal" ruleset="Optimization" class="RunShapes" method="readShapes" variable="line" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'line' could be declared final
+</violation>
+<violation beginline="151" endline="151" begincolumn="13" endcolumn="48" rule="LocalVariableCouldBeFinal" ruleset="Optimization" class="RunShapes" method="readShapes" variable="sIndex" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'sIndex' could be declared final
+</violation>
+<violation beginline="152" endline="152" begincolumn="13" endcolumn="53" rule="LocalVariableCouldBeFinal" ruleset="Optimization" class="RunShapes" method="readShapes" variable="name" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'name' could be declared final
+</violation>
+<violation beginline="154" endline="156" begincolumn="35" endcolumn="13" rule="AvoidInstantiatingObjectsInLoops" ruleset="Optimization" class="RunShapes" method="readShapes" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#AvoidInstantiatingObjectsInLoops" priority="3">
+Avoid instantiating new objects inside loops
+</violation>
+<violation beginline="154" endline="154" begincolumn="21" endcolumn="13" rule="DataflowAnomalyAnalysis" ruleset="Controversial" class="RunShapes" method="readShapes" variable="lineScanner" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'lineScanner' (lines '154'-'154').
+</violation>
+<violation beginline="154" endline="177" begincolumn="21" endcolumn="13" rule="DataflowAnomalyAnalysis" ruleset="Controversial" class="RunShapes" method="readShapes" variable="lineScanner" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DU'-anomaly for variable 'lineScanner' (lines '154'-'177').
+</violation>
+<violation beginline="154" endline="156" begincolumn="13" endcolumn="13" rule="LocalVariableCouldBeFinal" ruleset="Optimization" class="RunShapes" method="readShapes" variable="lineScanner" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'lineScanner' could be declared final
+</violation>
+<violation beginline="161" endline="161" begincolumn="19" endcolumn="19" rule="ShortVariable" ruleset="Naming" class="RunShapes" method="readShapes" variable="s" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like s
+</violation>
+<violation beginline="161" endline="161" begincolumn="13" endcolumn="52" rule="LocalVariableCouldBeFinal" ruleset="Optimization" class="RunShapes" method="readShapes" variable="s" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 's' could be declared final
+</violation>
+<violation beginline="169" endline="173" begincolumn="18" endcolumn="13" rule="EmptyIfStmt" ruleset="Empty Code" class="RunShapes" method="readShapes" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/empty.html#EmptyIfStmt" priority="3">
+Avoid empty if statements
+</violation>
+<violation beginline="182" endline="182" begincolumn="37" endcolumn="52" rule="LooseCoupling" ruleset="Type Resolution" class="RunShapes" method="printShapes" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/typeresolution.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'ArrayList'; use the interface instead
+</violation>
+<violation beginline="182" endline="185" begincolumn="13" endcolumn="33" rule="DataflowAnomalyAnalysis" ruleset="Controversial" class="RunShapes" method="printShapes" variable="s" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'UR'-anomaly for variable 's' (lines '182'-'185').
+</violation>
+<violation beginline="182" endline="182" begincolumn="37" endcolumn="60" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" class="RunShapes" method="printShapes" variable="toPrint" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'toPrint' is not assigned and could be declared final
+</violation>
+<violation beginline="184" endline="184" begincolumn="13" endcolumn="19" rule="LocalVariableCouldBeFinal" ruleset="Optimization" class="RunShapes" method="printShapes" variable="s" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 's' could be declared final
+</violation>
+<violation beginline="193" endline="193" begincolumn="41" endcolumn="56" rule="LooseCoupling" ruleset="Type Resolution" class="RunShapes" method="printShapeNames" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/typeresolution.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'ArrayList'; use the interface instead
+</violation>
+<violation beginline="193" endline="193" begincolumn="41" endcolumn="64" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" class="RunShapes" method="printShapeNames" variable="toPrint" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'toPrint' is not assigned and could be declared final
+</violation>
+<violation beginline="196" endline="196" begincolumn="25" endcolumn="26" rule="ShortVariable" ruleset="Naming" class="RunShapes" method="printShapeNames" variable="it" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like it
+</violation>
+<violation beginline="196" endline="196" begincolumn="9" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Optimization" class="RunShapes" method="printShapeNames" variable="it" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'it' could be declared final
+</violation>
+<violation beginline="200" endline="200" begincolumn="19" endcolumn="19" rule="ShortVariable" ruleset="Naming" class="RunShapes" method="printShapeNames" variable="s" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like s
+</violation>
+<violation beginline="200" endline="200" begincolumn="13" endcolumn="31" rule="LocalVariableCouldBeFinal" ruleset="Optimization" class="RunShapes" method="printShapeNames" variable="s" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 's' could be declared final
+</violation>
+<violation beginline="210" endline="210" begincolumn="49" endcolumn="64" rule="LooseCoupling" ruleset="Type Resolution" class="RunShapes" method="findLargestShapeByArea" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/typeresolution.html#LooseCoupling" priority="3">
+Avoid using implementation types like 'ArrayList'; use the interface instead
+</violation>
+<violation beginline="210" endline="210" begincolumn="49" endcolumn="75" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" class="RunShapes" method="findLargestShapeByArea" variable="collection" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'collection' is not assigned and could be declared final
+</violation>
+<violation beginline="212" endline="212" begincolumn="25" endcolumn="26" rule="ShortVariable" ruleset="Naming" class="RunShapes" method="findLargestShapeByArea" variable="it" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like it
+</violation>
+<violation beginline="212" endline="212" begincolumn="9" endcolumn="50" rule="LocalVariableCouldBeFinal" ruleset="Optimization" class="RunShapes" method="findLargestShapeByArea" variable="it" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'it' could be declared final
+</violation>
+<violation beginline="221" endline="221" begincolumn="19" endcolumn="19" rule="ShortVariable" ruleset="Naming" class="RunShapes" method="findLargestShapeByArea" variable="s" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like s
+</violation>
+<violation beginline="221" endline="221" begincolumn="13" endcolumn="31" rule="LocalVariableCouldBeFinal" ruleset="Optimization" class="RunShapes" method="findLargestShapeByArea" variable="s" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 's' could be declared final
+</violation>
+</file>
+<file name="/home/tkennedy/Courses/Reviews/cs330/s18/Review-08-Java-Shapes/Example-6/src/main/java/shapes/Circle.java">
+<violation beginline="12" endline="12" begincolumn="33" endcolumn="34" rule="ShortVariable" ruleset="Naming" package="shapes" class="Circle" variable="PI" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like PI
+</violation>
+<violation beginline="12" endline="12" begincolumn="26" endcolumn="46" rule="CommentRequired" ruleset="Comments" package="shapes" class="Circle" variable="PI" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+fieldCommentRequirement Required
+</violation>
+<violation beginline="13" endline="13" begincolumn="26" endcolumn="45" rule="CommentRequired" ruleset="Comments" package="shapes" class="Circle" variable="TAU" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+fieldCommentRequirement Required
+</violation>
+<violation beginline="15" endline="15" begincolumn="20" endcolumn="26" rule="VariableNamingConventions" ruleset="Naming" package="shapes" class="Circle" variable="_radius" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), '_radius' is not final.
+</violation>
+<violation beginline="15" endline="15" begincolumn="13" endcolumn="27" rule="CommentRequired" ruleset="Comments" package="shapes" class="Circle" variable="_radius" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+fieldCommentRequirement Required
+</violation>
+<violation beginline="20" endline="24" begincolumn="12" endcolumn="5" rule="CallSuperInConstructor" ruleset="Controversial" package="shapes" class="Circle" method="Circle" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#CallSuperInConstructor" priority="3">
+It is a good practice to call super() in a constructor
+</violation>
+<violation beginline="31" endline="31" begincolumn="27" endcolumn="27" rule="ShortVariable" ruleset="Naming" package="shapes" class="Circle" method="Circle" variable="r" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like r
+</violation>
+<violation beginline="31" endline="35" begincolumn="12" endcolumn="5" rule="CallSuperInConstructor" ruleset="Controversial" package="shapes" class="Circle" method="Circle" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#CallSuperInConstructor" priority="3">
+It is a good practice to call super() in a constructor
+</violation>
+<violation beginline="31" endline="31" begincolumn="20" endcolumn="27" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="Circle" method="Circle" variable="r" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'r' is not assigned and could be declared final
+</violation>
+<violation beginline="42" endline="46" begincolumn="12" endcolumn="5" rule="CallSuperInConstructor" ruleset="Controversial" package="shapes" class="Circle" method="Circle" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#CallSuperInConstructor" priority="3">
+It is a good practice to call super() in a constructor
+</violation>
+<violation beginline="42" endline="42" begincolumn="20" endcolumn="29" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="Circle" method="Circle" variable="src" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'src' is not assigned and could be declared final
+</violation>
+<violation beginline="61" endline="61" begincolumn="32" endcolumn="32" rule="ShortVariable" ruleset="Naming" package="shapes" class="Circle" method="radius" variable="r" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like r
+</violation>
+<violation beginline="61" endline="61" begincolumn="25" endcolumn="32" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="Circle" method="radius" variable="r" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'r' is not assigned and could be declared final
+</violation>
+<violation beginline="72" endline="72" begincolumn="13" endcolumn="23" rule="UselessParentheses" ruleset="Unnecessary" package="shapes" class="Circle" method="diameter" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="84" endline="84" begincolumn="13" endcolumn="34" rule="UselessParentheses" ruleset="Unnecessary" package="shapes" class="Circle" method="area" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="96" endline="96" begincolumn="13" endcolumn="25" rule="UselessParentheses" ruleset="Unnecessary" package="shapes" class="Circle" method="perimeter" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="104" endline="104" begincolumn="19" endcolumn="25" rule="ProperCloneImplementation" ruleset="Clone Implementation" package="shapes" class="Circle" method="clone" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/clone.html#ProperCloneImplementation" priority="2">
+Object clone() should be implemented with super.clone()
+</violation>
+<violation beginline="104" endline="107" begincolumn="12" endcolumn="5" rule="CloneMethodReturnTypeMustMatchClassName" ruleset="Clone Implementation" package="shapes" class="Circle" method="clone" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/clone.html#CloneMethodReturnTypeMustMatchClassName" priority="3">
+The return type of the clone() method must be the class name when implements Cloneable
+</violation>
+<violation beginline="115" endline="115" begincolumn="22" endcolumn="36" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="Circle" method="read" variable="scanner" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'scanner' is not assigned and could be declared final
+</violation>
+<violation beginline="130" endline="130" begincolumn="39" endcolumn="45" rule="AvoidDuplicateLiterals" ruleset="String and StringBuffer" package="shapes" class="Circle" method="toString" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/strings.html#AvoidDuplicateLiterals" priority="3">
+The String literal &quot;.4f\n&quot; appears 4 times in this file; the first occurrence is on line 130
+</violation>
+</file>
+<file name="/home/tkennedy/Courses/Reviews/cs330/s18/Review-08-Java-Shapes/Example-6/src/main/java/shapes/EquilateralTriangle.java">
+<violation beginline="12" endline="12" begincolumn="26" endcolumn="66" rule="CommentRequired" ruleset="Comments" package="shapes" class="EquilateralTriangle" variable="ROOT_3_DIV_4" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+fieldCommentRequirement Required
+</violation>
+<violation beginline="18" endline="23" begincolumn="12" endcolumn="5" rule="CallSuperInConstructor" ruleset="Controversial" package="shapes" class="EquilateralTriangle" method="EquilateralTriangle" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#CallSuperInConstructor" priority="3">
+It is a good practice to call super() in a constructor
+</violation>
+<violation beginline="30" endline="35" begincolumn="12" endcolumn="5" rule="CallSuperInConstructor" ruleset="Controversial" package="shapes" class="EquilateralTriangle" method="EquilateralTriangle" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#CallSuperInConstructor" priority="3">
+It is a good practice to call super() in a constructor
+</violation>
+<violation beginline="30" endline="30" begincolumn="33" endcolumn="43" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="EquilateralTriangle" method="EquilateralTriangle" variable="side" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'side' is not assigned and could be declared final
+</violation>
+<violation beginline="42" endline="47" begincolumn="12" endcolumn="5" rule="CallSuperInConstructor" ruleset="Controversial" package="shapes" class="EquilateralTriangle" method="EquilateralTriangle" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#CallSuperInConstructor" priority="3">
+It is a good practice to call super() in a constructor
+</violation>
+<violation beginline="42" endline="42" begincolumn="33" endcolumn="55" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="EquilateralTriangle" method="EquilateralTriangle" variable="src" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'src' is not assigned and could be declared final
+</violation>
+<violation beginline="77" endline="77" begincolumn="30" endcolumn="30" rule="ShortVariable" ruleset="Naming" package="shapes" class="EquilateralTriangle" method="side" variable="s" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like s
+</violation>
+<violation beginline="77" endline="77" begincolumn="23" endcolumn="30" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="EquilateralTriangle" method="side" variable="s" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 's' is not assigned and could be declared final
+</violation>
+<violation beginline="98" endline="98" begincolumn="19" endcolumn="25" rule="ProperCloneImplementation" ruleset="Clone Implementation" package="shapes" class="EquilateralTriangle" method="clone" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/clone.html#ProperCloneImplementation" priority="2">
+Object clone() should be implemented with super.clone()
+</violation>
+<violation beginline="98" endline="101" begincolumn="12" endcolumn="5" rule="CloneMethodReturnTypeMustMatchClassName" ruleset="Clone Implementation" package="shapes" class="EquilateralTriangle" method="clone" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/clone.html#CloneMethodReturnTypeMustMatchClassName" priority="3">
+The return type of the clone() method must be the class name when implements Cloneable
+</violation>
+<violation beginline="109" endline="109" begincolumn="22" endcolumn="36" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="EquilateralTriangle" method="read" variable="scanner" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'scanner' is not assigned and could be declared final
+</violation>
+<violation beginline="122" endline="122" begincolumn="39" endcolumn="45" rule="AvoidDuplicateLiterals" ruleset="String and StringBuffer" package="shapes" class="EquilateralTriangle" method="toString" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/strings.html#AvoidDuplicateLiterals" priority="3">
+The String literal &quot;.4f\n&quot; appears 4 times in this file; the first occurrence is on line 122
+</violation>
+</file>
+<file name="/home/tkennedy/Courses/Reviews/cs330/s18/Review-08-Java-Shapes/Example-6/src/main/java/shapes/RightTriangle.java">
+<violation beginline="12" endline="12" begincolumn="26" endcolumn="51" rule="CommentRequired" ruleset="Comments" package="shapes" class="RightTriangle" variable="ONE_HALF" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+fieldCommentRequirement Required
+</violation>
+<violation beginline="14" endline="22" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Comments" package="shapes" class="RightTriangle" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/comments.html#CommentSize" priority="3">
+Comment is too large: Too many lines
+</violation>
+<violation beginline="23" endline="23" begincolumn="46" endcolumn="56" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="RightTriangle" method="computeHypotenuse" variable="base" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'base' is not assigned and could be declared final
+</violation>
+<violation beginline="23" endline="23" begincolumn="59" endcolumn="71" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="RightTriangle" method="computeHypotenuse" variable="height" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'height' is not assigned and could be declared final
+</violation>
+<violation beginline="26" endline="26" begincolumn="15" endcolumn="25" rule="UselessParentheses" ruleset="Unnecessary" package="shapes" class="RightTriangle" method="computeHypotenuse" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="51" endline="61" begincolumn="12" endcolumn="5" rule="CallSuperInConstructor" ruleset="Controversial" package="shapes" class="RightTriangle" method="RightTriangle" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#CallSuperInConstructor" priority="3">
+It is a good practice to call super() in a constructor
+</violation>
+<violation beginline="51" endline="51" begincolumn="27" endcolumn="37" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="RightTriangle" method="RightTriangle" variable="base" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'base' is not assigned and could be declared final
+</violation>
+<violation beginline="51" endline="51" begincolumn="40" endcolumn="52" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="RightTriangle" method="RightTriangle" variable="height" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'height' is not assigned and could be declared final
+</violation>
+<violation beginline="68" endline="75" begincolumn="12" endcolumn="5" rule="CallSuperInConstructor" ruleset="Controversial" package="shapes" class="RightTriangle" method="RightTriangle" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#CallSuperInConstructor" priority="3">
+It is a good practice to call super() in a constructor
+</violation>
+<violation beginline="68" endline="68" begincolumn="27" endcolumn="43" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="RightTriangle" method="RightTriangle" variable="src" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'src' is not assigned and could be declared final
+</violation>
+<violation beginline="90" endline="90" begincolumn="23" endcolumn="33" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="RightTriangle" method="base" variable="side" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'side' is not assigned and could be declared final
+</violation>
+<violation beginline="113" endline="113" begincolumn="25" endcolumn="35" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="RightTriangle" method="height" variable="side" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'side' is not assigned and could be declared final
+</violation>
+<violation beginline="148" endline="148" begincolumn="19" endcolumn="25" rule="ProperCloneImplementation" ruleset="Clone Implementation" package="shapes" class="RightTriangle" method="clone" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/clone.html#ProperCloneImplementation" priority="2">
+Object clone() should be implemented with super.clone()
+</violation>
+<violation beginline="148" endline="151" begincolumn="12" endcolumn="5" rule="CloneMethodReturnTypeMustMatchClassName" ruleset="Clone Implementation" package="shapes" class="RightTriangle" method="clone" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/clone.html#CloneMethodReturnTypeMustMatchClassName" priority="3">
+The return type of the clone() method must be the class name when implements Cloneable
+</violation>
+<violation beginline="159" endline="159" begincolumn="22" endcolumn="36" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="RightTriangle" method="read" variable="scanner" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'scanner' is not assigned and could be declared final
+</violation>
+<violation beginline="175" endline="175" begincolumn="39" endcolumn="45" rule="AvoidDuplicateLiterals" ruleset="String and StringBuffer" package="shapes" class="RightTriangle" method="toString" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/strings.html#AvoidDuplicateLiterals" priority="3">
+The String literal &quot;.4f\n&quot; appears 5 times in this file; the first occurrence is on line 175
+</violation>
+</file>
+<file name="/home/tkennedy/Courses/Reviews/cs330/s18/Review-08-Java-Shapes/Example-6/src/main/java/shapes/Shape.java">
+<violation beginline="11" endline="108" begincolumn="17" endcolumn="1" rule="AbstractNaming" ruleset="Naming" package="shapes" class="Shape" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#AbstractNaming" priority="3">
+Abstract classes should be named AbstractXXX
+</violation>
+<violation beginline="13" endline="13" begincolumn="28" endcolumn="48" rule="CommentRequired" ruleset="Comments" package="shapes" class="Shape" variable="WIDTH_LABEL" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+fieldCommentRequirement Required
+</violation>
+<violation beginline="14" endline="14" begincolumn="28" endcolumn="48" rule="CommentRequired" ruleset="Comments" package="shapes" class="Shape" variable="WIDTH_VALUE" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+fieldCommentRequirement Required
+</violation>
+<violation beginline="22" endline="22" begincolumn="47" endcolumn="58" rule="VariableNamingConventions" ruleset="Naming" package="shapes" class="Shape" method="getFormat" variable="value_format" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'value_format' is not final.
+</violation>
+<violation beginline="22" endline="22" begincolumn="40" endcolumn="58" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="Shape" method="getFormat" variable="value_format" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'value_format' is not assigned and could be declared final
+</violation>
+<violation beginline="27" endline="27" begincolumn="22" endcolumn="26" rule="VariableNamingConventions" ruleset="Naming" package="shapes" class="Shape" variable="_name" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), '_name' is not final.
+</violation>
+<violation beginline="27" endline="27" begincolumn="15" endcolumn="27" rule="CommentRequired" ruleset="Comments" package="shapes" class="Shape" variable="_name" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+fieldCommentRequirement Required
+</violation>
+<violation beginline="42" endline="42" begincolumn="19" endcolumn="29" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="Shape" method="Shape" variable="name" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'name' is not assigned and could be declared final
+</violation>
+<violation beginline="61" endline="61" begincolumn="33" endcolumn="37" rule="VariableNamingConventions" ruleset="Naming" package="shapes" class="Shape" method="name" variable="_name" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), '_name' is not final.
+</violation>
+<violation beginline="61" endline="61" begincolumn="26" endcolumn="37" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="Shape" method="name" variable="_name" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter '_name' is not assigned and could be declared final
+</violation>
+<violation beginline="83" endline="83" begincolumn="21" endcolumn="69" rule="CloneMethodReturnTypeMustMatchClassName" ruleset="Clone Implementation" package="shapes" class="Shape" method="clone" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/clone.html#CloneMethodReturnTypeMustMatchClassName" priority="3">
+The return type of the clone() method must be the class name when implements Cloneable
+</violation>
+<violation beginline="99" endline="99" begincolumn="13" endcolumn="25" rule="UnnecessaryParentheses" ruleset="Controversial" package="shapes" class="Shape" method="toString" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#UnnecessaryParentheses" priority="3">
+This statement may have some unnecessary parentheses
+</violation>
+<violation beginline="99" endline="103" begincolumn="13" endcolumn="13" rule="UselessParentheses" ruleset="Unnecessary" package="shapes" class="Shape" method="toString" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+</file>
+<file name="/home/tkennedy/Courses/Reviews/cs330/s18/Review-08-Java-Shapes/Example-6/src/main/java/shapes/ShapeFactory.java">
+<violation beginline="6" endline="6" begincolumn="1" endcolumn="31" rule="DontImportJavaLang" ruleset="Import Statements" package="shapes" class="ShapeFactory" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/imports.html#DontImportJavaLang" priority="4">
+Avoid importing anything from the package java.lang
+</violation>
+<violation beginline="17" endline="17" begincolumn="23" endcolumn="27" rule="VariableNamingConventions" ruleset="Naming" package="shapes" class="ShapeFactory$ShapePair" variable="_name" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), '_name' is not final.
+</violation>
+<violation beginline="17" endline="17" begincolumn="16" endcolumn="28" rule="CommentRequired" ruleset="Comments" package="shapes" class="ShapeFactory$ShapePair" variable="_name" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+fieldCommentRequirement Required
+</violation>
+<violation beginline="18" endline="18" begincolumn="23" endcolumn="28" rule="VariableNamingConventions" ruleset="Naming" package="shapes" class="ShapeFactory$ShapePair" variable="_model" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), '_model' is not final.
+</violation>
+<violation beginline="18" endline="18" begincolumn="16" endcolumn="29" rule="CommentRequired" ruleset="Comments" package="shapes" class="ShapeFactory$ShapePair" variable="_model" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+fieldCommentRequirement Required
+</violation>
+<violation beginline="26" endline="26" begincolumn="27" endcolumn="30" rule="NullAssignment" ruleset="Controversial" package="shapes" class="ShapeFactory$ShapePair" method="ShapePair" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#NullAssignment" priority="3">
+Assigning an Object to null is a code smell.  Consider refactoring.
+</violation>
+<violation beginline="35" endline="35" begincolumn="27" endcolumn="37" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="ShapeFactory$ShapePair" method="ShapePair" variable="name" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'name' is not assigned and could be declared final
+</violation>
+<violation beginline="35" endline="35" begincolumn="40" endcolumn="50" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="ShapeFactory$ShapePair" method="ShapePair" variable="shape" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'shape' is not assigned and could be declared final
+</violation>
+<violation beginline="50" endline="50" begincolumn="32" endcolumn="44" rule="VariableNamingConventions" ruleset="Naming" package="shapes" class="ShapeFactory" variable="_known_shapes" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), '_known_shapes' is not final.
+</violation>
+<violation beginline="50" endline="56" begincolumn="20" endcolumn="6" rule="CommentRequired" ruleset="Comments" package="shapes" class="ShapeFactory" variable="_known_shapes" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+fieldCommentRequirement Required
+</violation>
+<violation beginline="66" endline="70" begincolumn="17" endcolumn="41" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="shapes" class="ShapeFactory" method="createShape" variable="pair" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'UR'-anomaly for variable 'pair' (lines '66'-'70').
+</violation>
+<violation beginline="66" endline="66" begincolumn="38" endcolumn="48" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="ShapeFactory" method="createShape" variable="name" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'name' is not assigned and could be declared final
+</violation>
+<violation beginline="69" endline="69" begincolumn="14" endcolumn="27" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="shapes" class="ShapeFactory" method="createShape" variable="pair" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'pair' could be declared final
+</violation>
+<violation beginline="70" endline="70" begincolumn="18" endcolumn="27" rule="UnnecessaryParentheses" ruleset="Controversial" package="shapes" class="ShapeFactory" method="createShape" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#UnnecessaryParentheses" priority="3">
+This statement may have some unnecessary parentheses
+</violation>
+<violation beginline="70" endline="70" begincolumn="18" endcolumn="27" rule="UselessParentheses" ruleset="Unnecessary" package="shapes" class="ShapeFactory" method="createShape" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="71" endline="71" begincolumn="17" endcolumn="52" rule="OnlyOneReturn" ruleset="Controversial" package="shapes" class="ShapeFactory" method="createShape" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#OnlyOneReturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="83" endline="86" begincolumn="17" endcolumn="41" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="shapes" class="ShapeFactory" method="isKnown" variable="pair" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'UR'-anomaly for variable 'pair' (lines '83'-'86').
+</violation>
+<violation beginline="83" endline="83" begincolumn="36" endcolumn="46" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="ShapeFactory" method="isKnown" variable="name" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'name' is not assigned and could be declared final
+</violation>
+<violation beginline="85" endline="85" begincolumn="14" endcolumn="27" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="shapes" class="ShapeFactory" method="isKnown" variable="pair" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'pair' could be declared final
+</violation>
+<violation beginline="86" endline="86" begincolumn="18" endcolumn="27" rule="UnnecessaryParentheses" ruleset="Controversial" package="shapes" class="ShapeFactory" method="isKnown" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#UnnecessaryParentheses" priority="3">
+This statement may have some unnecessary parentheses
+</violation>
+<violation beginline="86" endline="86" begincolumn="18" endcolumn="27" rule="UselessParentheses" ruleset="Unnecessary" package="shapes" class="ShapeFactory" method="isKnown" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="87" endline="87" begincolumn="17" endcolumn="28" rule="OnlyOneReturn" ruleset="Controversial" package="shapes" class="ShapeFactory" method="isKnown" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#OnlyOneReturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="97" endline="102" begincolumn="13" endcolumn="30" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="shapes" class="ShapeFactory" method="listKnown" variable="pair" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'UR'-anomaly for variable 'pair' (lines '97'-'102').
+</violation>
+<violation beginline="99" endline="99" begincolumn="9" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="shapes" class="ShapeFactory" method="listKnown" variable="bld" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'bld' could be declared final
+</violation>
+<violation beginline="101" endline="101" begincolumn="14" endcolumn="27" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="shapes" class="ShapeFactory" method="listKnown" variable="pair" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'pair' could be declared final
+</violation>
+</file>
+<file name="/home/tkennedy/Courses/Reviews/cs330/s18/Review-08-Java-Shapes/Example-6/src/main/java/shapes/Square.java">
+<violation beginline="12" endline="12" begincolumn="20" endcolumn="24" rule="VariableNamingConventions" ruleset="Naming" package="shapes" class="Square" variable="_side" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), '_side' is not final.
+</violation>
+<violation beginline="12" endline="12" begincolumn="13" endcolumn="25" rule="CommentRequired" ruleset="Comments" package="shapes" class="Square" variable="_side" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+fieldCommentRequirement Required
+</violation>
+<violation beginline="28" endline="28" begincolumn="27" endcolumn="27" rule="ShortVariable" ruleset="Naming" package="shapes" class="Square" method="Square" variable="s" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like s
+</violation>
+<violation beginline="28" endline="28" begincolumn="20" endcolumn="27" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="Square" method="Square" variable="s" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 's' is not assigned and could be declared final
+</violation>
+<violation beginline="39" endline="39" begincolumn="20" endcolumn="29" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="Square" method="Square" variable="src" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'src' is not assigned and could be declared final
+</violation>
+<violation beginline="58" endline="58" begincolumn="30" endcolumn="30" rule="ShortVariable" ruleset="Naming" package="shapes" class="Square" method="side" variable="s" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like s
+</violation>
+<violation beginline="58" endline="58" begincolumn="23" endcolumn="30" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="Square" method="side" variable="s" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 's' is not assigned and could be declared final
+</violation>
+<violation beginline="87" endline="87" begincolumn="19" endcolumn="25" rule="ProperCloneImplementation" ruleset="Clone Implementation" package="shapes" class="Square" method="clone" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/clone.html#ProperCloneImplementation" priority="2">
+Object clone() should be implemented with super.clone()
+</violation>
+<violation beginline="87" endline="90" begincolumn="12" endcolumn="5" rule="CloneMethodReturnTypeMustMatchClassName" ruleset="Clone Implementation" package="shapes" class="Square" method="clone" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/clone.html#CloneMethodReturnTypeMustMatchClassName" priority="3">
+The return type of the clone() method must be the class name when implements Cloneable
+</violation>
+<violation beginline="98" endline="98" begincolumn="22" endcolumn="36" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="Square" method="read" variable="scanner" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'scanner' is not assigned and could be declared final
+</violation>
+</file>
+<file name="/home/tkennedy/Courses/Reviews/cs330/s18/Review-08-Java-Shapes/Example-6/src/main/java/shapes/Triangle.java">
+<violation beginline="11" endline="188" begincolumn="58" endcolumn="1" rule="TooManyMethods" ruleset="Code Size" package="shapes" class="Triangle" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/codesize.html#TooManyMethods" priority="3">
+This class has too many methods, consider refactoring it.
+</violation>
+<violation beginline="13" endline="13" begincolumn="22" endcolumn="28" rule="VariableNamingConventions" ruleset="Naming" package="shapes" class="Triangle" variable="_side_a" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), '_side_a' is not final.
+</violation>
+<violation beginline="13" endline="13" begincolumn="15" endcolumn="29" rule="CommentRequired" ruleset="Comments" package="shapes" class="Triangle" variable="_side_a" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+fieldCommentRequirement Required
+</violation>
+<violation beginline="14" endline="14" begincolumn="22" endcolumn="28" rule="VariableNamingConventions" ruleset="Naming" package="shapes" class="Triangle" variable="_side_b" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), '_side_b' is not final.
+</violation>
+<violation beginline="14" endline="14" begincolumn="15" endcolumn="29" rule="CommentRequired" ruleset="Comments" package="shapes" class="Triangle" variable="_side_b" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+fieldCommentRequirement Required
+</violation>
+<violation beginline="15" endline="15" begincolumn="22" endcolumn="28" rule="VariableNamingConventions" ruleset="Naming" package="shapes" class="Triangle" variable="_side_c" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), '_side_c' is not final.
+</violation>
+<violation beginline="15" endline="15" begincolumn="15" endcolumn="29" rule="CommentRequired" ruleset="Comments" package="shapes" class="Triangle" variable="_side_c" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+fieldCommentRequirement Required
+</violation>
+<violation beginline="37" endline="37" begincolumn="29" endcolumn="35" rule="VariableNamingConventions" ruleset="Naming" package="shapes" class="Triangle" method="Triangle" variable="_side_a" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), '_side_a' is not final.
+</violation>
+<violation beginline="37" endline="37" begincolumn="45" endcolumn="51" rule="VariableNamingConventions" ruleset="Naming" package="shapes" class="Triangle" method="Triangle" variable="_side_b" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), '_side_b' is not final.
+</violation>
+<violation beginline="37" endline="37" begincolumn="61" endcolumn="67" rule="VariableNamingConventions" ruleset="Naming" package="shapes" class="Triangle" method="Triangle" variable="_side_c" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), '_side_c' is not final.
+</violation>
+<violation beginline="37" endline="37" begincolumn="22" endcolumn="35" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="Triangle" method="Triangle" variable="_side_a" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter '_side_a' is not assigned and could be declared final
+</violation>
+<violation beginline="37" endline="37" begincolumn="38" endcolumn="51" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="Triangle" method="Triangle" variable="_side_b" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter '_side_b' is not assigned and could be declared final
+</violation>
+<violation beginline="37" endline="37" begincolumn="54" endcolumn="67" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="Triangle" method="Triangle" variable="_side_c" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter '_side_c' is not assigned and could be declared final
+</violation>
+<violation beginline="51" endline="51" begincolumn="22" endcolumn="33" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="Triangle" method="Triangle" variable="src" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'src' is not assigned and could be declared final
+</violation>
+<violation beginline="75" endline="75" begincolumn="24" endcolumn="34" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="Triangle" method="sideA" variable="side" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'side' is not assigned and could be declared final
+</violation>
+<violation beginline="95" endline="95" begincolumn="24" endcolumn="34" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="Triangle" method="sideB" variable="side" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'side' is not assigned and could be declared final
+</violation>
+<violation beginline="115" endline="115" begincolumn="24" endcolumn="34" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="Triangle" method="sideC" variable="side" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'side' is not assigned and could be declared final
+</violation>
+<violation beginline="129" endline="129" begincolumn="16" endcolumn="16" rule="ShortVariable" ruleset="Naming" package="shapes" class="Triangle" method="area" variable="s" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like s
+</violation>
+<violation beginline="129" endline="129" begincolumn="9" endcolumn="34" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="shapes" class="Triangle" method="area" variable="s" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 's' could be declared final
+</violation>
+<violation beginline="131" endline="131" begincolumn="18" endcolumn="26" rule="UnnecessaryParentheses" ruleset="Controversial" package="shapes" class="Triangle" method="area" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#UnnecessaryParentheses" priority="3">
+This statement may have some unnecessary parentheses
+</violation>
+<violation beginline="131" endline="135" begincolumn="18" endcolumn="9" rule="UselessParentheses" ruleset="Unnecessary" package="shapes" class="Triangle" method="area" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="155" endline="155" begincolumn="19" endcolumn="25" rule="ProperCloneImplementation" ruleset="Clone Implementation" package="shapes" class="Triangle" method="clone" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/clone.html#ProperCloneImplementation" priority="2">
+Object clone() should be implemented with super.clone()
+</violation>
+<violation beginline="155" endline="158" begincolumn="12" endcolumn="5" rule="CloneMethodReturnTypeMustMatchClassName" ruleset="Clone Implementation" package="shapes" class="Triangle" method="clone" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/clone.html#CloneMethodReturnTypeMustMatchClassName" priority="3">
+The return type of the clone() method must be the class name when implements Cloneable
+</violation>
+<violation beginline="166" endline="166" begincolumn="22" endcolumn="36" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="shapes" class="Triangle" method="read" variable="scanner" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'scanner' is not assigned and could be declared final
+</violation>
+<violation beginline="181" endline="181" begincolumn="39" endcolumn="45" rule="AvoidDuplicateLiterals" ruleset="String and StringBuffer" package="shapes" class="Triangle" method="toString" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/strings.html#AvoidDuplicateLiterals" priority="3">
+The String literal &quot;.4f\n&quot; appears 5 times in this file; the first occurrence is on line 181
+</violation>
+</file>
+<file name="/home/tkennedy/Courses/Reviews/cs330/s18/Review-08-Java-Shapes/Example-6/src/main/java/utilities/Utilities.java">
+<violation beginline="35" endline="35" begincolumn="33" endcolumn="41" rule="UselessParentheses" ruleset="Unnecessary" package="edu.odu.cs.tkennedy.utilities" class="Utilities" method="centeredTitle" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="37" endline="37" begincolumn="16" endcolumn="28" rule="UnnecessaryParentheses" ruleset="Controversial" package="edu.odu.cs.tkennedy.utilities" class="Utilities" method="centeredTitle" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#UnnecessaryParentheses" priority="3">
+This statement may have some unnecessary parentheses
+</violation>
+<violation beginline="37" endline="37" begincolumn="16" endcolumn="61" rule="UselessParentheses" ruleset="Unnecessary" package="edu.odu.cs.tkennedy.utilities" class="Utilities" method="centeredTitle" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="58" endline="67" begincolumn="13" endcolumn="50" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="edu.odu.cs.tkennedy.utilities" class="Utilities" method="projectHeading" variable="line" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'UR'-anomaly for variable 'line' (lines '58'-'67').
+</violation>
+<violation beginline="60" endline="60" begincolumn="9" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="edu.odu.cs.tkennedy.utilities" class="Utilities" method="projectHeading" variable="bld" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'bld' could be declared final
+</violation>
+<violation beginline="64" endline="64" begincolumn="55" endcolumn="58" rule="AppendCharacterWithChar" ruleset="String and StringBuffer" package="edu.odu.cs.tkennedy.utilities" class="Utilities" method="projectHeading" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/strings.html#AppendCharacterWithChar" priority="3">
+Avoid appending characters as strings in StringBuffer.append.
+</violation>
+<violation beginline="91" endline="91" begincolumn="36" endcolumn="45" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.odu.cs.tkennedy.utilities" class="Utilities" method="areEqual" variable="lhs" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'lhs' is not assigned and could be declared final
+</violation>
+<violation beginline="91" endline="91" begincolumn="48" endcolumn="57" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.odu.cs.tkennedy.utilities" class="Utilities" method="areEqual" variable="rhs" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'rhs' is not assigned and could be declared final
+</violation>
+<violation beginline="91" endline="91" begincolumn="60" endcolumn="75" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.odu.cs.tkennedy.utilities" class="Utilities" method="areEqual" variable="threshold" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'threshold' is not assigned and could be declared final
+</violation>
+</file>
+</pmd>

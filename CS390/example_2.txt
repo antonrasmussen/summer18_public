@@ -1,0 +1,5 @@
+input (a + b) * 
+
+sort a*b* where a^mb^n
+
+accept if m > n
