@@ -1,0 +1,30 @@
+Test has 8 Questions
+
+Look at classroom rules again
+
+- Note: if we didn't discuss it in class, I won't see it.
+
+- Test should take too long
+
+- Everything is curved at the end
+
+- Read the whole questions!! 
+
+
+Areas of Interest:
+
+1) Dispatcher - general purpose. Where it is in the chain--> takes things off of ready and puts them in running. Bunch of different methods for doing that. [Not related to Priority Queues]
+
+2) Priority Queues - e.g. how do you prevent starvation, how do you change priorities & why, etc. etc.
+
+3) Threads - threads give me a lightweight process so the context swtich is less painful. Are they useful? Yes, but would they be useful in a single CPU system? --> think about the examples we went over in class
+
+4) Draw a Gantt chart with Turnaround times... processes with a cpu burst, time slice value, lay out the schedule, and something that's a bit different: arrival times. Example in notes, everything already sitting there... they're not going to be sitting there. It's hard to exectue a process before it arrives, pay attention to that. We'll have three or four or five and we'll have to layout the turnaround times... we won't do anything with average turn around times...
+
+5) Mutex . . . mutual exclusion, semaphores... what's the concept of an atomic variable... why do I need mutex? No need to write code... 
+
+6) Multi-Partition Memory -- best fit, worst fit . . . you're never gonna get "copy down def. 12" as a right ans. Given this situation, what do you get, how do you do it, how does it work
+
+7) Paging (in general) ... could be the original paging (everything was still loaded, it was divided up--what's the mechanics). Or demand paging... but that's probably gonna be more for the last question
+
+8) Page replacement. Given page reference string and working set... tell with FIFO or Least Recently Used... not both (both for final)... lay out diagram, mark little asterisks just like in class, and it'll be fine.

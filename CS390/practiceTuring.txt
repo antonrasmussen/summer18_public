@@ -1,0 +1,9 @@
+input a^m b^n c^p , where m != n != p, all >= 0
+
+out is abcabcabc - iwth no left over chars
+
+input aaabbccccc
+
+output abcabc
+
+

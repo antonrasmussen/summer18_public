@@ -1,0 +1,7 @@
+Input string T1 
+
+(a + b)* 
+
+Output
+
+am bn on tape 2
