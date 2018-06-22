@@ -1,0 +1,13 @@
+Looking at old Silicon Graphics' GTX system architecture based on [AKEL88]
+
+Span processors are just traffic cops - grabs stuff from pixel bus and puts it on minispan bus. Asynchronous
+
+Pixel cache - for when stuff comes in too fast--never happened/never used. Could be used for video
+
+Frame buffer broken up into 20 chunks
+
+Multimedia graphics processor is the output traffic cop... must synchronize each span process output because it's all serial from DAC Multiplexer
+
+The original Star Wars were created with these
+
+Sun XVR-4000= Stereo video -> Virtual Reality
