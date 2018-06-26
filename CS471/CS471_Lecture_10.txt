@@ -1,0 +1,46 @@
+Exam 1 Stuff
+
+
+UGRAD
+
+Pers = 7
+HI = 82
+Lo = 56
+Mean = 66.7
+Median = 66
+
+1) Physically atomic? no. once in critical section they're run normally. Need to keep critical section short so you don't run into this problem too often. 
+
+2) No. Don't agree. 
+
+IO
+
+COMP
+
+I/O out
+
+COMP 2
+
+I/O Final
+
+
+can become 
+
+IO
+
+COMP
+
+                 I/O out
+COMP 2
+
+I/O Final
+
+
+
+
+3) 
+
+
+
+
+WED = File Systems
