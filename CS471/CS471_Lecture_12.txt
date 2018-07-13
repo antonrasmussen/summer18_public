@@ -1,0 +1,29 @@
+TOday -  Finish up data comm stuff, get into data security next week
+
+We've already seen routing and topologies, so we're going to deal with the other items that data comm has
+
+One is contention
+
+Single LAN is a broadcast env. meaning everyone gets everything
+
+
+two architectures from monday: bus env and ring env
+
+
+
+https://en.wikipedia.org/wiki/IEEE_802
+802.1 - hardware stds
+802.2 - software stds
+
+.3,.4,.5 = access methods => .3 = ethernet = CSMA/CD, a contention network with an limited number of collisions with resolution done with random number generation
+
+vOLTMETER ON bus at A ... if there's nothing, then start talking... B does same thing, going toward A, until collision
+
+https://www.geeksforgeeks.org/back-off-algorithm-csmacd/
+
+Ethernets have limited lengths of wires because of contention issues
+
+Gigabit ethernet is not ethernet at all because it's point to point... there's no contention. Gigibit is not CSMA/CD . . . because it would be amax of 6'
+
+Mutual Exlcusion in Networked Environment is a nightmare
+
